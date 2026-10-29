@@ -1,7 +1,7 @@
 export type Skill = 'lectura' | 'escucha' | 'escritura' | 'oral';
 export type Level = 'A1' | 'A2' | 'B1' | 'B2' | 'C1';
 export type Question = { id: string; prompt: string; options: string[]; answer: number; explanation: string; stimulus?: string; group?: string };
-export type Task = { id: string; skill: Skill; order: number; level: Level; title: string; instruction: string; instruction_nl?:string; stimulus: string; questions: Question[]; choices?: {title:string; stimulus:string; image?:string}[]; prompts?: string[]; alternativePrompts?: string[]; preparation?:number; duration?:number; words?:[number,number]; audioSeconds?:number; maxSelections?:number; };
+export type Task = { variante_geolectal?:string; audio_url?:string; id: string; skill: Skill; order: number; level: Level; title: string; instruction: string; instruction_nl?:string; stimulus: string; questions: Question[]; choices?: {title:string; stimulus:string; image?:string}[]; prompts?: string[]; alternativePrompts?: string[]; preparation?:number; duration?:number; words?:[number,number]; audioSeconds?:number; maxSelections?:number; };
 export type Bank = { version: string; tasks: Task[] };
 export type Modality = 'Global' | 'S1' | 'S2' | 'S3' | 'S4' | 'S5';
 export type Session = {

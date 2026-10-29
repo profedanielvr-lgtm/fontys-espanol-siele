@@ -42,7 +42,7 @@ class RequestGuard:
                 return messages.pop(0) if messages else await original_receive()
             receive=bounded_receive
         # Los endpoints heredados son solo de desarrollo, sin autorización por usuario.
-        legacy=path.startswith('/api/') and not path.startswith('/api/secure/') and path!='/api/salud'
+        legacy=path.startswith('/api/') and not path.startswith(('/api/secure/','/api/admin/','/api/generar-reporte-pdf/')) and path not in {'/api/salud','/api/audio-estimulo'}
         if settings.environment=='production' and legacy:
             return await JSONResponse({'detail':'Usa una sesión autorizada / Gebruik een bevoegde sessie'},403)(scope,receive,send)
         async def guarded_send(message):

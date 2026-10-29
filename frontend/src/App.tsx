@@ -8,6 +8,7 @@ import { Runner } from './Runner';
 import { Results } from './Results';
 import {BackendStatus} from './BackendStatus';
 import {SecureExam} from './SecureExam';
+import {AdminPanel} from './AdminPanel';
 import {ExamProtocols} from './ExamProtocols';
 import { SKILLS, LABELS, SHORT, MODALITIES, LEVELS, MINUTES, newSession, objectiveScore } from './engine';
 import { DEFAULT_PREFS, load, save, clearAudio, download, rawBackup, resetStore, type AppData } from './storage';
@@ -118,7 +119,7 @@ function App() {
         catch (e) {
             setStorageError(String(e));
         } }}>Borrar</button></div>; })}</div> : <Empty title="Tu historia empieza con un intento" text="Aquí aparecerán tus prácticas, tus textos y tus reflexiones." action={() => navigate('simulacros')} label="Elegir un simulacro"/>}</>}
-      {page === 'docente' && <><PageHeading eyebrow="DE ESTUDIANTE A PROFESOR/A" title="Laboratorio docente" text="Una propuesta didáctica para Leraar Spaans: conecta tu aprendizaje con el diseño, la observación y la mejora de clases."/><div className="notice"><Icon name="graduate"/><p>Contextos de referencia: vmbo, onderbouw havo/vwo y mbo. Propuesta de práctica independiente; no constituye un plan de estudios aprobado por Fontys.</p></div><div className="teaching-grid">{[
+      {page === 'docente' && <><AdminPanel apiUrl={data.preferences.apiUrl}/><PageHeading eyebrow="DE ESTUDIANTE A PROFESOR/A" title="Laboratorio docente" text="Una propuesta didáctica para Leraar Spaans: conecta tu aprendizaje con el diseño, la observación y la mejora de clases."/><div className="notice"><Icon name="graduate"/><p>Contextos de referencia: vmbo, onderbouw havo/vwo y mbo. Propuesta de práctica independiente; no constituye un plan de estudios aprobado por Fontys.</p></div><div className="teaching-grid">{[
                     ['objetivo', '01', 'Diseña una microtarea', 'Define el grupo, un objetivo comunicativo observable y una situación real. ¿Qué hará el alumnado con el español?', 'Ejemplo: un grupo A2 de vmbo acuerda un plan para una visita de intercambio.'],
                     ['apoyos', '02', 'Diferencia los apoyos', '¿Qué ayudas serán opcionales? ¿Cómo eliminarás barreras sin cambiar el objetivo que quieres observar?', 'Piensa en tiempo de preparación, tarjetas de interacción y acceso a los materiales.'],
                     ['evidencia', '03', 'Observa con una pregunta', 'Decide qué evidencia recogerás, cómo la anonimizarás y qué te permitirá interpretar.', 'Ejemplo: ¿cómo piden aclaraciones los estudiantes antes y después de recibir un modelo?'],

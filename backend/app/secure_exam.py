@@ -217,8 +217,8 @@ async def propose_review(task_id:str,request:Request,a:SecureAttempt=Depends(aut
 def download_oral(task_id:str,part:int,a:SecureAttempt=Depends(authorized)):
     record=a.data['recordings'].get(f'{task_id}:{part}')
     if not record:raise HTTPException(404,'Audio no disponible / Audio niet beschikbaar')
-    path=settings.upload_dir/record['file']
-    return FileResponse(path,filename=f'{task_id}-{part}{path.suffix}',media_type='application/octet-stream')
+    from .admin import audio_file
+    return audio_file(a,f'{task_id}:{part}')
 
 @router.delete('/session')
 def erase(a:SecureAttempt=Depends(authorized),db:Session=Depends(get_db)):

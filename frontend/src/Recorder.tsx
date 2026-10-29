@@ -11,8 +11,9 @@ type Props = {
     onBusy?: (busy: boolean) => void;
     existing?: string;
     disabled?: boolean;
+    allowResend?: boolean;
 };
-export function Recorder({ audioKey, duration, preparation, onSaved, onBusy, existing, disabled = false }: Props) {
+export function Recorder({ audioKey, duration, preparation, onSaved, onBusy, existing, disabled = false, allowResend=false }: Props) {
     const [phase, setPhase] = useState<'ready' | 'preparing' | 'requesting' | 'recording' | 'saving' | 'saved'>('ready');
     const [left, setLeft] = useState(duration);
     const [url, setUrl] = useState('');
@@ -49,7 +50,7 @@ export function Recorder({ audioKey, duration, preparation, onSaved, onBusy, exi
             return;
         const timer = setInterval(() => { const seconds = Math.max(0, Math.ceil((deadline.current - Date.now()) / 1000)); setLeft(seconds); if (!seconds) {
             if (phase === 'recording')
-                recorder.current?.stop();
+                { if (recorder.current?.state === 'recording') recorder.current.stop(); }
             else {
                 setPhase('ready');
                 setLeft(duration);
@@ -107,7 +108,7 @@ export function Recorder({ audioKey, duration, preparation, onSaved, onBusy, exi
                 reportBusy(false);
             } };
             r.onstop = () => { media.getTracks().forEach(t => t.stop()); if (!alive.current)
-                return; const b = new Blob(chunks, { type: r.mimeType }); blob.current = b; if (!b.size) {
+                return; const b = new Blob(chunks, { type: r.mimeType || type }); blob.current = b; if (!b.size) {
                 setError('No se ha capturado audio.');
                 setPhase('ready');
                 reportBusy(false);
@@ -129,13 +130,14 @@ export function Recorder({ audioKey, duration, preparation, onSaved, onBusy, exi
     }
     return <Localized><div className={`recorder ${phase === 'recording' ? 'is-recording' : ''}`}>
     <div className="recorder-top"><span className="round-icon"><Icon name="mic" size={26}/></span><div><strong>{phase === 'saved' ? 'Respuesta guardada' : phase === 'preparing' ? 'Prepara tu respuesta' : phase === 'recording' ? 'Grabando tu respuesta' : 'Tu turno de hablar'}</strong><small>{phase === 'saved' ? 'Almacenada en este navegador' : 'El audio se guarda solo en este dispositivo.'}</small></div><span className="timer" role="timer">{formatTime(left)}</span></div>
-    {url && <audio controls src={url} aria-label="Escuchar tu respuesta"/>}
+    {url && <audio key={url} controls preload="metadata" src={url} aria-label="Escuchar tu respuesta / Je antwoord beluisteren" onError={() => setError('No se pudo reproducir la grabación. Descárgala para conservarla. / De opname kon niet worden afgespeeld. Download deze om te bewaren.')}/>}
     <div className="button-row">
       {phase === 'recording' ? <button className="danger" onClick={() => recorder.current?.stop()}>■ Detener y guardar</button> : <button disabled={disabled || phase === 'requesting' || phase === 'saving' || phase === 'preparing' || phase === 'saved'} onClick={() => void record()}><Icon name="mic"/> {phase === 'saving' ? 'Guardando…' : phase === 'requesting' ? 'Abriendo micrófono…' : 'Grabar respuesta'}</button>}
       {phase === 'ready' && preparation > 0 && <button className="secondary" disabled={disabled} onClick={() => { deadline.current = Date.now() + preparation * 1000; setLeft(preparation); setPhase('preparing'); }}>Preparar · {preparation}s</button>}
       {phase === 'preparing' && <button className="secondary" onClick={() => { setPhase('ready'); setLeft(duration); }}>Terminar preparación</button>}
       {blob.current && <button className="secondary" onClick={() => downloadBlob(`${audioKey}.${blob.current?.type.includes('mp4') ? 'mp4' : blob.current?.type.includes('ogg') ? 'ogg' : 'webm'}`, blob.current!)}><Icon name="download"/> Descargar audio</button>}
       {phase === 'saved' && !disabled && <button className="text-button" onClick={() => { setPhase('ready'); setLeft(duration); }}>Volver a grabar</button>}
+      {phase === 'saved' && allowResend && !disabled && <button className="secondary" onClick={() => savedCallback.current(audioKey)}>Reintentar envío / Opnieuw verzenden</button>}
       {error && blob.current && <button className="secondary" onClick={() => void persist(blob.current!)}>Reintentar guardado</button>}
     </div>{error && <p role="alert" className="error">{error}</p>}
   </div></Localized>;

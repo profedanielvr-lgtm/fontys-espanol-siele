@@ -4,7 +4,7 @@
 
 Autoría visible: **Diseñado por Daniel Valle Robles**.
 
-El frontend funciona en GitHub Pages sin servidor: banco original, simulacros, voz del navegador, grabación local, informes y portafolio. FastAPI se publica aparte solo si se desea IA o recepción centralizada de audios. GitHub Pages no ejecuta Python ni protege datos del lado del cliente.
+El frontend funciona en GitHub Pages sin servidor: banco original, simulacros, reproducción MP3 preparada, grabación local, resultados locales y portafolio. Los informes PDF y el panel de calificación requieren backend. FastAPI se publica aparte solo si se desea IA o recepción centralizada de audios. GitHub Pages no ejecuta Python ni protege datos del lado del cliente.
 
 1. Subir el contenido de esta carpeta a la raíz del repositorio elegido. No incluir `.env`, bases de datos, grabaciones, `.packages`, `.venv`, `node_modules` ni `.pnpm-store`.
 2. En Settings → Pages → Build and deployment, seleccionar **GitHub Actions**.

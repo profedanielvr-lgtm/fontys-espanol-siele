@@ -10,6 +10,7 @@ class Pregunta(Base):
     destreza: Mapped[str] = mapped_column(String(16))
     nivel_mcer: Mapped[str] = mapped_column(String(2))
     contenido_estimulo: Mapped[str] = mapped_column(Text)
+    variante_geolectal: Mapped[str] = mapped_column(String(32), default='espanol_peninsular', server_default='espanol_peninsular')
     opciones_json: Mapped[list | None] = mapped_column(JSON, nullable=True)
     respuesta_correcta: Mapped[str | None] = mapped_column(Text, nullable=True)
     metadatos_calibracion: Mapped[dict] = mapped_column(JSON, default=dict)
@@ -46,3 +47,8 @@ class SecureAttempt(Base):
     expires_at: Mapped[float]=mapped_column(Float)
     revision: Mapped[int]=mapped_column(default=0)
     data: Mapped[dict]=mapped_column(JSON)
+
+class AdminSession(Base):
+    __tablename__='admin_session'
+    token_hash: Mapped[str]=mapped_column(String(64),primary_key=True)
+    expires_at: Mapped[float]=mapped_column(Float)

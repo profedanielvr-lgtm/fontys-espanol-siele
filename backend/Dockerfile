@@ -8,6 +8,6 @@ COPY frontend/public/bank.json ./frontend/public/bank.json
 WORKDIR /project/backend
 RUN useradd --create-home app && mkdir /data && chown app:app /data
 USER app
-ENV DATABASE_URL=sqlite:////data/simulador.db UPLOAD_DIR=/data/uploads ENVIRONMENT=production
+ENV DATABASE_URL=sqlite:////data/simulador.db UPLOAD_DIR=/data/uploads STATIC_DIR=/data/static ENVIRONMENT=production
 EXPOSE 8000
 CMD ["python", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

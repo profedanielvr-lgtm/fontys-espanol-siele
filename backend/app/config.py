@@ -16,5 +16,10 @@ class Settings(BaseSettings):
     ffprobe_path: str = 'ffprobe'
     ai_requests_per_minute: int = 4
     secure_bank_path: str = ''
+    static_dir: Path = Path('./static')
+    admin_username: str = 'docente'
+    admin_password_hash: str = ''
+    tts_model: str = 'gpt-4o-mini-tts'
+    tts_voice: str = 'marin'
 
 settings = Settings()

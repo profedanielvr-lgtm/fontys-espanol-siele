@@ -20,10 +20,17 @@ from .bank import get_task,stimulus
 from .media import receive_audio
 from .oral_evaluation import evaluate_oral
 from .cleanup import cleanup_expired
+from fastapi.staticfiles import StaticFiles
+from sqlalchemy import inspect, text
+from .admin import router as admin_router
+from .stimulus_audio import router as stimulus_router
 
 @asynccontextmanager
 async def lifespan(_):
     Base.metadata.create_all(engine)
+    if 'variante_geolectal' not in {c['name'] for c in inspect(engine).get_columns('pregunta')}:
+        with engine.begin() as connection:
+            connection.execute(text("ALTER TABLE pregunta ADD COLUMN variante_geolectal VARCHAR(32) NOT NULL DEFAULT 'espanol_peninsular'"))
     settings.upload_dir.mkdir(parents=True, exist_ok=True)
     with SessionLocal() as db:
         if db.scalar(select(Pregunta.id).limit(1)) is None:
@@ -51,6 +58,10 @@ app = FastAPI(title='Práctica de español A1–C1', lifespan=lifespan)
 app.add_middleware(RequestGuard)
 app.add_middleware(CORSMiddleware, allow_origins=[settings.frontend_origin], allow_methods=['GET','POST','DELETE'], allow_headers=['Content-Type','Authorization'])
 app.include_router(secure_router)
+app.include_router(admin_router)
+app.include_router(stimulus_router)
+settings.static_dir.mkdir(parents=True,exist_ok=True)
+app.mount('/static',StaticFiles(directory=settings.static_dir),name='static')
 
 @app.post('/api/evaluar-audio',dependencies=[Depends(quota)])
 async def evaluar_audio(task_id:Literal['eio-1','eio-2','eio-3','eio-4','eio-5']=Form(),parte:int=Form(ge=0,le=3),
@@ -74,7 +85,7 @@ def salud():
 @app.get('/api/preguntas')
 def preguntas(db: Session = Depends(get_db)):
     # Nunca exponer claves de corrección ni metadatos internos al cliente.
-    return [{'id':p.id,'destreza':p.destreza,'nivel_mcer':p.nivel_mcer,'contenido_estimulo':p.contenido_estimulo,'opciones':p.opciones_json} for p in db.scalars(select(Pregunta))]
+    return [{'id':p.id,'destreza':p.destreza,'nivel_mcer':p.nivel_mcer,'contenido_estimulo':p.contenido_estimulo,'variante_geolectal':p.variante_geolectal,'opciones':p.opciones_json} for p in db.scalars(select(Pregunta))]
 
 @app.post('/api/intentos', status_code=201)
 def crear_intento(body: CrearIntento, db: Session = Depends(get_db)):
@@ -132,36 +143,16 @@ async def evaluar_tarea(body: EvaluarTarea):
 async def audio(intento_id: int = Form(gt=0), pregunta_id: int = Form(gt=0),
                 archivo: UploadFile = File(), db: Session = Depends(get_db)):
     comprobar(db, intento_id, pregunta_id, 'oral')
-    formatos = {'audio/webm':('.webm', b'\x1aE\xdf\xa3'), 'audio/ogg':('.ogg',b'OggS'),
-                'audio/mp4':('.mp4',b'ftyp')}
-    mime = (archivo.content_type or '').split(';')[0].lower()
-    if mime not in formatos:
-        await archivo.close()
-        raise HTTPException(415,'Formato permitido: WebM, Ogg o MP4 de audio')
-    extension, firma = formatos[mime]
-    destino = settings.upload_dir / (uuid4().hex + extension)
-    total = 0
+    mime=(archivo.content_type or '').split(';')[0].lower()
+    extension={'audio/webm':'.webm','audio/ogg':'.ogg','audio/mp4':'.mp4','audio/wav':'.wav','audio/x-wav':'.wav'}.get(mime,'.invalid')
+    destino=settings.upload_dir/(uuid4().hex+extension)
     try:
-        with destino.open('xb') as output:
-            while bloque := await archivo.read(65536):
-                if total == 0 and (bloque[4:8] != firma if mime == 'audio/mp4' else not bloque.startswith(firma)):
-                    raise HTTPException(415,'Cabecera de contenedor inválida')
-                total += len(bloque)
-                if total > settings.max_audio_bytes:
-                    raise HTTPException(413,'Audio demasiado grande')
-                output.write(bloque)
-        if total == 0:
-            raise HTTPException(422,'Audio vacío')
-        respuesta = RespuestaUsuario(intento_id=intento_id,pregunta_id=pregunta_id,
-            respuesta_dada=destino.name,retroalimentacion_ia='Audio recibido; pendiente de revisión humana. No evaluado.')
-        db.add(respuesta); db.commit()
+        quality=await receive_audio(archivo,destino)
+        respuesta=RespuestaUsuario(intento_id=intento_id,pregunta_id=pregunta_id,respuesta_dada=destino.name,calificacion_ia={'quality':quality},retroalimentacion_ia='Audio recibido; pendiente de revisión humana. No evaluado.')
+        db.add(respuesta);db.commit()
     except Exception:
-        db.rollback()
-        destino.unlink(missing_ok=True)
-        raise
-    finally:
-        await archivo.close()
-    return {'respuesta_id':respuesta.id,'bytes':total,'estado':'recibido_no_evaluado'}
+        db.rollback();destino.unlink(missing_ok=True);raise
+    return {'respuesta_id':respuesta.id,'bytes':quality['bytes'],'estado':'recibido_no_evaluado'}
 
 @app.post('/api/audio-practica', status_code=201)
 async def audio_practica(task_id: Literal['eio-1','eio-2','eio-3','eio-4','eio-5'] = Form(),

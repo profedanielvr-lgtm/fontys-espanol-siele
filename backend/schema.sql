@@ -1,5 +1,14 @@
 PRAGMA foreign_keys=ON;
 
+CREATE TABLE admin_session (
+	token_hash VARCHAR(64) NOT NULL, 
+	expires_at FLOAT NOT NULL, 
+	PRIMARY KEY (token_hash)
+)
+
+
+;
+
 CREATE TABLE exam_ticket (
 	code_hash VARCHAR(64) NOT NULL, 
 	modality VARCHAR(16) NOT NULL, 
@@ -8,8 +17,8 @@ CREATE TABLE exam_ticket (
 	PRIMARY KEY (code_hash)
 )
 
-;
 
+;
 
 CREATE TABLE intento_examen (
 	id INTEGER NOT NULL, 
@@ -21,14 +30,15 @@ CREATE TABLE intento_examen (
 	CHECK (estado IN ('en_curso','finalizado'))
 )
 
-;
 
+;
 
 CREATE TABLE pregunta (
 	id INTEGER NOT NULL, 
 	destreza VARCHAR(16) NOT NULL, 
 	nivel_mcer VARCHAR(2) NOT NULL, 
 	contenido_estimulo TEXT NOT NULL, 
+	variante_geolectal VARCHAR(32) DEFAULT 'espanol_peninsular' NOT NULL, 
 	opciones_json JSON, 
 	respuesta_correcta TEXT, 
 	metadatos_calibracion JSON NOT NULL, 
@@ -37,8 +47,8 @@ CREATE TABLE pregunta (
 	CHECK (nivel_mcer IN ('A1','A2','B1','B2','C1'))
 )
 
-;
 
+;
 
 CREATE TABLE secure_attempt (
 	id VARCHAR(36) NOT NULL, 
@@ -50,8 +60,8 @@ CREATE TABLE secure_attempt (
 	UNIQUE (token_hash)
 )
 
-;
 
+;
 
 CREATE TABLE respuesta_usuario (
 	id INTEGER NOT NULL, 
@@ -66,6 +76,3 @@ CREATE TABLE respuesta_usuario (
 )
 
 ;
-
-CREATE INDEX ix_respuesta_usuario_intento_id ON respuesta_usuario (intento_id);
-CREATE INDEX ix_respuesta_usuario_pregunta_id ON respuesta_usuario (pregunta_id);

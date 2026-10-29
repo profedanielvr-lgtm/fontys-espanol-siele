@@ -11,3 +11,6 @@ dist/
 .test-run-*/
 private-bank*.json
 exam-tickets*.txt
+
+backend/static/
+output/

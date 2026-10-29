@@ -151,6 +151,10 @@ task('eio-5','oral',5,'C1','Argumentar una postura','Mantén el tema de la tarea
 out=Path(__file__).resolve().parents[1]/'frontend/public/bank.json'
 out.parent.mkdir(parents=True,exist_ok=True)
 translations=json.loads((out.parent/'instructions.nl.json').read_text(encoding='utf-8'))
-for t in tasks:t['instruction_nl']=translations[t['id']]
+for t in tasks:
+    t['instruction_nl']=translations[t['id']]
+    t['variante_geolectal']='espanol_peninsular'
+    t['validacion_geolectal']='pendiente'
+    t['audio_url']=None
 out.write_text(json.dumps({'version':'fontys-original-3.0','tasks':tasks},ensure_ascii=False,indent=2),encoding='utf-8')
 print(f'{len(tasks)} tareas. CL: {sum(len(t["questions"]) for t in tasks if t["skill"]=="lectura")}; CA: 38 respuestas puntuables (T6: seis selecciones entre doce ideas).')

@@ -1,3 +1,7 @@
+# Actualización: audio MP3, panel docente e informes PDF
+
+Consulta [AUDIO-ADMIN-INFORMES.md](AUDIO-ADMIN-INFORMES.md) para configurar el servidor, crear la contraseña docente y preparar los audios. Estas funciones necesitan backend HTTPS; GitHub Pages sirve únicamente la interfaz.
+
 > **Actualización v3 — ES/NL, sesiones controladas y evaluación productiva.** Lee primero [Investigación y seguridad](INVESTIGACION-Y-SEGURIDAD.md). La web publicada sigue siendo estática: la IA real y el control de tiempo desde servidor requieren conectar un backend HTTPS. La pantalla de Preferencias distingue expresamente conexión ausente, demostración y proveedor configurado. Las funciones y límites de v3 de este bloque sustituyen las descripciones históricas de v2 que aparecen más abajo.
 
 ## Novedades v3 / Nieuw in v3

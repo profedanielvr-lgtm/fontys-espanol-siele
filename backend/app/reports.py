@@ -11,6 +11,7 @@ def make_report(attempt):
     from .secure_exam import public
     out=BytesIO();styles=getSampleStyleSheet()
     styles['Title'].textColor=colors.HexColor('#183c47');styles['BodyText'].leading=15
+    styles['Heading2'].keepWithNext=True
     p=lambda value:Paragraph(escape(str(value)).replace('\n','<br/>'),styles['BodyText'])
     story=[Paragraph('INFORME FORMATIVO<br/>FORMATIEF VERSLAG',styles['Title']),p('Práctica de español A1-C1 | Oefening Spaans A1-C1'),Spacer(1,12),p('Diseñado por / Ontworpen door Daniel Valle Robles'),p('Contexto: formación de profesores de español / lerarenopleiding Spaans - Fontys Hogeschool'),Spacer(1,12),p('Propuesta independiente. No es una certificación SIELE ni una acreditación de Fontys. / Onafhankelijk oefenmateriaal. Geen SIELE-certificaat of Fontys-accreditatie.'),Spacer(1,12),p('Identificador / Kenmerk: '+attempt.id),p('Fecha de emisión / Uitgiftedatum: '+datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')),p('Modalidad / Modaliteit: '+attempt.data['modality']),Spacer(1,15)]
     scores=public(attempt)['scores']

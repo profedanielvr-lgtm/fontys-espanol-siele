@@ -1,0 +1,10 @@
+**/node_modules
+**/.packages
+**/.venv
+**/.pnpm-store
+**/.env
+**/uploads
+**/*.db
+**/.test-run-*
+.git
+**/__pycache__

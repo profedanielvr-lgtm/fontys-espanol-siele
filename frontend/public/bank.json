@@ -1,0 +1,1358 @@
+{
+  "version": "fontys-original-2.0",
+  "tasks": [
+    {
+      "id": "cl-1",
+      "skill": "lectura",
+      "order": 1,
+      "level": "A1",
+      "title": "Mensajes del campus",
+      "instruction": "Lee cada mensaje y elige una respuesta.",
+      "stimulus": "",
+      "questions": [
+        {
+          "id": "cl1-1",
+          "prompt": "¿Para qué sirve este aviso?",
+          "options": [
+            "Para explicar cómo usar la biblioteca",
+            "Para vender una tarjeta de transporte",
+            "Para anunciar una clase de español"
+          ],
+          "answer": 0,
+          "explanation": "El aviso reúne horarios y normas de préstamo.",
+          "stimulus": "La biblioteca abre de lunes a viernes de nueve a seis. Los sábados abre solo por la mañana. Para pedir libros necesitas la tarjeta de estudiante. Puedes leer las revistas en la sala, pero no puedes llevártelas a casa. Si tienes preguntas, habla con la persona del mostrador."
+        },
+        {
+          "id": "cl1-2",
+          "prompt": "¿Qué propone Lucía?",
+          "options": [
+            "Cambiar de colegio",
+            "Preparar una actividad en el campus",
+            "Ir a ver al tutor a su casa"
+          ],
+          "answer": 1,
+          "explanation": "La reunión es para preparar la actividad en la cafetería.",
+          "stimulus": "Hola, soy Lucía, tu compañera de prácticas. Mañana no vamos al colegio: el tutor está enfermo. Nos vemos en la cafetería del campus a las diez para preparar la actividad. Trae tu cuaderno; yo llevo los libros. Después podemos comer juntas, si no tienes otra clase."
+        },
+        {
+          "id": "cl1-3",
+          "prompt": "¿Cuándo hay que inscribirse?",
+          "options": [
+            "El miércoles después del taller",
+            "Antes del martes",
+            "El viernes por la mañana"
+          ],
+          "answer": 1,
+          "explanation": "El anuncio pide inscribirse antes del martes.",
+          "stimulus": "Taller de conversación: los miércoles a las cuatro en el aula 12. Es gratuito para estudiantes de primero. No hace falta comprar un libro, pero debes inscribirte antes del martes. Cada semana hablamos de un tema diferente. Esta semana vamos a hablar de viajes y de nuestras ciudades."
+        },
+        {
+          "id": "cl1-4",
+          "prompt": "¿Qué cambia hoy?",
+          "options": [
+            "El aula",
+            "El libro",
+            "La hora de comienzo"
+          ],
+          "answer": 2,
+          "explanation": "Solo se retrasa el comienzo; el aula no cambia.",
+          "stimulus": "Atención: hoy la clase de español empieza media hora más tarde, a las once y media. La profesora llega en tren y hay un problema en la estación. El aula es la misma, la 24. Mientras esperáis, podéis revisar el vocabulario de la unidad tres en parejas."
+        },
+        {
+          "id": "cl1-5",
+          "prompt": "¿Qué se paga por separado?",
+          "options": [
+            "Internet",
+            "El agua",
+            "La electricidad"
+          ],
+          "answer": 2,
+          "explanation": "«La luz se paga aparte» equivale a pagar la electricidad por separado.",
+          "stimulus": "Se busca compañero de piso cerca del campus. La habitación cuesta cuatrocientos euros al mes, con agua e internet incluidos. La luz se paga aparte. El piso tiene cocina y dos dormitorios. No se admiten animales. Puedes visitar la habitación el viernes por la tarde, después de llamar a Rosa."
+        }
+      ]
+    },
+    {
+      "id": "cl-2",
+      "skill": "lectura",
+      "order": 2,
+      "level": "A2",
+      "title": "Una visita de observación",
+      "instruction": "Lee el correo de Marta y responde.",
+      "stimulus": "Hola, equipo:\nOs escribo para explicar la visita del próximo jueves al instituto donde hago mis prácticas. La profesora de español nos ha invitado a observar dos clases y a hablar con algunos alumnos. La idea no es evaluar a la profesora, sino conocer cómo organiza el trabajo en parejas y cómo ayuda a los estudiantes cuando no entienden una instrucción.\nNos encontraremos a las ocho y cuarto delante de la estación. El autobús sale a las ocho y media. El centro está a unos veinte minutos y las clases empiezan a las nueve. No hace falta comprar billetes: la coordinadora ya ha preparado unas tarjetas para el grupo. Sí debéis llevar un documento de identidad para entrar en el edificio y vuestro cuaderno para tomar notas.\nDurante la primera clase nos sentaremos al fondo y no participaremos en las actividades. En la segunda, la profesora nos pedirá que ayudemos a un grupo pequeño a preparar unas preguntas para un intercambio con estudiantes de Sevilla. Después habrá una reunión breve con ella. Podremos preguntarle por los materiales y por los cambios que hace cuando una actividad resulta demasiado difícil.\nAl terminar iremos a la biblioteca del instituto. Allí prepararemos juntos un resumen de lo observado. No vamos a publicar nombres ni fotografías de los alumnos. Si alguien quiere usar un ejemplo en su portafolio, tendrá que escribirlo de forma anónima. La visita terminará a la una. Podéis comer en el centro, pero debéis traer vuestra comida porque la cafetería solo vende bebidas ese día.\nConfirmad antes del martes si podéis venir. Así podré comunicar el número de visitantes a la recepción. Si os resulta imposible llegar a la estación, avisadme para buscar otra opción.\nUn saludo,\nMarta",
+      "questions": [
+        {
+          "id": "cl2-1",
+          "prompt": "¿Cuál es la finalidad principal de la visita?",
+          "options": [
+            "Poner una nota a la profesora",
+            "Observar formas de organizar el aprendizaje",
+            "Hacer un examen de acceso"
+          ],
+          "answer": 1,
+          "explanation": "Se explica que se observará el trabajo en parejas y el apoyo a las instrucciones."
+        },
+        {
+          "id": "cl2-2",
+          "prompt": "¿Qué deben hacer los participantes antes del martes?",
+          "options": [
+            "Confirmar su asistencia",
+            "Comprar billetes de autobús",
+            "Entregar un portafolio completo"
+          ],
+          "answer": 0,
+          "explanation": "Marta necesita confirmar el número de visitantes."
+        },
+        {
+          "id": "cl2-3",
+          "prompt": "¿Qué deben llevar para entrar?",
+          "options": [
+            "Una fotografía",
+            "Un billete impreso",
+            "Un documento de identidad"
+          ],
+          "answer": 2,
+          "explanation": "Se solicita un documento para acceder al edificio."
+        },
+        {
+          "id": "cl2-4",
+          "prompt": "En la segunda clase, los visitantes…",
+          "options": [
+            "solo observarán desde el fondo",
+            "ayudarán a un grupo a preparar preguntas",
+            "sustituirán a la profesora todo el día"
+          ],
+          "answer": 1,
+          "explanation": "La ayuda con preguntas está prevista para la segunda clase."
+        },
+        {
+          "id": "cl2-5",
+          "prompt": "¿Cómo se pueden usar los ejemplos en el portafolio?",
+          "options": [
+            "Con los nombres de todo el alumnado",
+            "Solo con fotografías públicas",
+            "De forma anónima"
+          ],
+          "answer": 2,
+          "explanation": "El correo prohíbe publicar nombres y pide anonimizar ejemplos."
+        }
+      ]
+    },
+    {
+      "id": "cl-3",
+      "skill": "lectura",
+      "order": 3,
+      "level": "B1",
+      "title": "Tres maneras de aprender",
+      "instruction": "Relaciona cada enunciado con el proyecto A, B o C. Puedes repetir letras.",
+      "stimulus": "A · Aprender en el barrio\nEn el centro cultural buscamos estudiantes de español para acompañar a personas recién llegadas. No damos clases de gramática: salimos al barrio, practicamos cómo pedir una cita y conversamos sobre servicios públicos. Los encuentros son los sábados por la mañana. Antes de empezar, los voluntarios reciben un taller sobre comunicación intercultural. Cada pareja decide su recorrido. No exigimos experiencia docente, pero sí compromiso durante tres meses. Al final de cada salida escribimos una breve reflexión sobre los malentendidos que han surgido y sobre las estrategias que nos han ayudado a resolverlos. La participación es gratuita; los desplazamientos corren por cuenta del voluntario.\n\nB · Un intercambio sin maletas\nNuestro proyecto conecta por videollamada a futuros profesores en Tilburg con universitarios de Bogotá. Los encuentros se realizan los martes al final de la tarde y duran cuarenta minutos. Cada sesión dedica la mitad del tiempo al español y la otra mitad al neerlandés. Antes de conversar, los participantes eligen un tema y comparten dos preguntas en una plataforma. Al terminar guardan una grabación, solo si ambas personas lo autorizan. El material se utiliza para analizar estrategias de interacción, nunca para poner una nota al compañero. La universidad presta auriculares a quienes los necesitan. Se recomienda una conexión estable y un lugar tranquilo.\n\nC · Lecturas en movimiento\nUna biblioteca de barrio ofrece prácticas para estudiantes que quieran acercar cuentos en español a adolescentes. El equipo prepara una sesión mensual de lectura dramatizada y crea tarjetas con expresiones útiles. No es necesario actuar bien: interesa que cada lector aprenda a adaptar la voz y las explicaciones al público. Las reuniones de preparación son los jueves. La biblioteca paga los materiales y entrega un certificado de participación al final del semestre. Cada estudiante colabora con un docente de secundaria para seleccionar textos adecuados. Después del encuentro, los adolescentes votan qué historia les gustaría continuar leyendo y escriben recomendaciones para el siguiente grupo.",
+      "questions": [
+        {
+          "id": "cl3-1",
+          "prompt": "Ofrece preparación intercultural antes de participar.",
+          "options": [
+            "A · Aprender en el barrio",
+            "B · Un intercambio sin maletas",
+            "C · Lecturas en movimiento"
+          ],
+          "answer": 0,
+          "explanation": "El proyecto A lo indica explícitamente."
+        },
+        {
+          "id": "cl3-2",
+          "prompt": "Combina dos lenguas en cada encuentro.",
+          "options": [
+            "A · Aprender en el barrio",
+            "B · Un intercambio sin maletas",
+            "C · Lecturas en movimiento"
+          ],
+          "answer": 1,
+          "explanation": "El proyecto B lo indica explícitamente."
+        },
+        {
+          "id": "cl3-3",
+          "prompt": "Cubre el coste de los materiales.",
+          "options": [
+            "A · Aprender en el barrio",
+            "B · Un intercambio sin maletas",
+            "C · Lecturas en movimiento"
+          ],
+          "answer": 2,
+          "explanation": "El proyecto C lo indica explícitamente."
+        },
+        {
+          "id": "cl3-4",
+          "prompt": "Se desarrolla fuera de un aula, recorriendo el entorno.",
+          "options": [
+            "A · Aprender en el barrio",
+            "B · Un intercambio sin maletas",
+            "C · Lecturas en movimiento"
+          ],
+          "answer": 0,
+          "explanation": "El proyecto A lo indica explícitamente."
+        },
+        {
+          "id": "cl3-5",
+          "prompt": "Requiere consentimiento para conservar una grabación.",
+          "options": [
+            "A · Aprender en el barrio",
+            "B · Un intercambio sin maletas",
+            "C · Lecturas en movimiento"
+          ],
+          "answer": 1,
+          "explanation": "El proyecto B lo indica explícitamente."
+        },
+        {
+          "id": "cl3-6",
+          "prompt": "Permite al público elegir futuras lecturas.",
+          "options": [
+            "A · Aprender en el barrio",
+            "B · Un intercambio sin maletas",
+            "C · Lecturas en movimiento"
+          ],
+          "answer": 2,
+          "explanation": "El proyecto C lo indica explícitamente."
+        },
+        {
+          "id": "cl3-7",
+          "prompt": "Exige mantener el compromiso durante tres meses.",
+          "options": [
+            "A · Aprender en el barrio",
+            "B · Un intercambio sin maletas",
+            "C · Lecturas en movimiento"
+          ],
+          "answer": 0,
+          "explanation": "El proyecto A lo indica explícitamente."
+        },
+        {
+          "id": "cl3-8",
+          "prompt": "Facilita auriculares en préstamo.",
+          "options": [
+            "A · Aprender en el barrio",
+            "B · Un intercambio sin maletas",
+            "C · Lecturas en movimiento"
+          ],
+          "answer": 1,
+          "explanation": "El proyecto B lo indica explícitamente."
+        }
+      ]
+    },
+    {
+      "id": "cl-4",
+      "skill": "lectura",
+      "order": 4,
+      "level": "B2",
+      "title": "Reconstruir un argumento",
+      "instruction": "Completa cada hueco con uno de los cinco fragmentos del texto correspondiente. Sobra uno por texto.",
+      "stimulus": "Texto A · Aprender a colaborar\nPedimos a una clase que diseñara una ruta por su ciudad para estudiantes de intercambio. La propuesta parecía sencilla: cada grupo debía acordar tres lugares y justificar la elección. Habíamos repartido las instrucciones y reservado tiempo suficiente. [1] En varias mesas, una persona tomó todas las decisiones mientras sus compañeros se limitaron a copiar. En otras, el grupo esperó a que el docente resolviera cada duda.\nAl analizar lo ocurrido, distinguimos dos problemas: algunos estudiantes no sabían cómo expresar desacuerdo de manera cortés y otros no conocían el vocabulario necesario para comparar opciones. [2] Las tarjetas no contenían respuestas sobre la ruta, sino fórmulas para pedir aclaraciones, proponer una alternativa y comprobar si todos estaban de acuerdo. También asignamos responsabilidades rotativas para que cada participante tuviera una oportunidad de intervenir.\nDurante las siguientes sesiones observamos más preguntas entre compañeros y menos consultas al profesor. [3] Primero dejamos de repartir las tarjetas de forma automática; después solo las ofrecimos a quien las solicitaba. Para comprobar el efecto, registramos ejemplos de negociación y pedimos una breve autoevaluación individual. Nos interesaba la participación real, no solo el producto final del grupo.\nLa experiencia no demuestra que cualquier trabajo en equipo sea beneficioso. Sí sugiere que una tarea comunicativa necesita condiciones para que la interacción sea posible. [4] Diseñar esas condiciones exige observar, ajustar y volver a observar, en lugar de interpretar el silencio como falta de interés.\n\nTexto B · Más de una voz\nDurante años, los diálogos del manual que utilizábamos mostraban una sola forma de hablar y una única imagen de la vida cotidiana. Las actividades no decían que otras variedades fueran incorrectas, pero tampoco permitían escucharlas. [5] Algunos alumnos creían que las palabras que usaban en casa no tenían lugar en el aula. Otros identificaban toda una comunidad con dos o tres escenas repetidas del libro.\nLa revisión comenzó con una pregunta al alumnado: ¿qué voces faltan aquí? [6] Buscamos entrevistas breves, relatos de jóvenes y conversaciones de contextos diferentes. Pedimos autorización para usar materiales personales y evitamos presentar a un hablante como representante de todo un país. Los estudiantes compararon usos y analizaron qué cambiaba según la relación entre interlocutores.\nEl objetivo no era memorizar una lista interminable de variantes. [7] Queríamos desarrollar la capacidad de interpretar a otras personas y de elegir formas adecuadas a cada situación. Por eso discutimos también quién decide qué se considera prestigioso y qué expectativas puede tener un interlocutor. Las comparaciones partían de ejemplos contextualizados, nunca de jerarquías entre acentos.\nTras varias semanas, el alumnado empezó a aportar nuevos textos y a formular preguntas más precisas sobre el registro y la intención. [8] El cambio exigió tiempo de preparación y no resolvió todos los problemas, pero amplió las posibilidades de participación. La diversidad se convirtió en una herramienta para comprender el lenguaje y no en una colección de curiosidades.",
+      "questions": [
+        {
+          "id": "cl4-1",
+          "prompt": "Hueco [1] · Texto A",
+          "options": [
+            "Sin embargo, la actividad no produjo las conversaciones que esperábamos.",
+            "Por eso decidimos ofrecer tarjetas con preguntas de apoyo.",
+            "A partir de entonces, retiramos poco a poco esas ayudas.",
+            "El cambio nos enseñó que autonomía y acompañamiento no son incompatibles.",
+            "La dirección canceló definitivamente todas las clases de idiomas."
+          ],
+          "answer": 0,
+          "explanation": "El fragmento enlaza con el problema o la consecuencia desarrollados en el párrafo.",
+          "group": "A"
+        },
+        {
+          "id": "cl4-2",
+          "prompt": "Hueco [2] · Texto A",
+          "options": [
+            "Sin embargo, la actividad no produjo las conversaciones que esperábamos.",
+            "Por eso decidimos ofrecer tarjetas con preguntas de apoyo.",
+            "A partir de entonces, retiramos poco a poco esas ayudas.",
+            "El cambio nos enseñó que autonomía y acompañamiento no son incompatibles.",
+            "La dirección canceló definitivamente todas las clases de idiomas."
+          ],
+          "answer": 1,
+          "explanation": "El fragmento enlaza con el problema o la consecuencia desarrollados en el párrafo.",
+          "group": "A"
+        },
+        {
+          "id": "cl4-3",
+          "prompt": "Hueco [3] · Texto A",
+          "options": [
+            "Sin embargo, la actividad no produjo las conversaciones que esperábamos.",
+            "Por eso decidimos ofrecer tarjetas con preguntas de apoyo.",
+            "A partir de entonces, retiramos poco a poco esas ayudas.",
+            "El cambio nos enseñó que autonomía y acompañamiento no son incompatibles.",
+            "La dirección canceló definitivamente todas las clases de idiomas."
+          ],
+          "answer": 2,
+          "explanation": "El fragmento enlaza con el problema o la consecuencia desarrollados en el párrafo.",
+          "group": "A"
+        },
+        {
+          "id": "cl4-4",
+          "prompt": "Hueco [4] · Texto A",
+          "options": [
+            "Sin embargo, la actividad no produjo las conversaciones que esperábamos.",
+            "Por eso decidimos ofrecer tarjetas con preguntas de apoyo.",
+            "A partir de entonces, retiramos poco a poco esas ayudas.",
+            "El cambio nos enseñó que autonomía y acompañamiento no son incompatibles.",
+            "La dirección canceló definitivamente todas las clases de idiomas."
+          ],
+          "answer": 3,
+          "explanation": "El fragmento enlaza con el problema o la consecuencia desarrollados en el párrafo.",
+          "group": "A"
+        },
+        {
+          "id": "cl4-5",
+          "prompt": "Hueco [5] · Texto B",
+          "options": [
+            "Esa aparente neutralidad tiene consecuencias para quienes no se reconocen en el material.",
+            "Para evitarlo, incorporamos voces procedentes de distintos países.",
+            "No se trataba de sustituir un modelo único por otro igualmente cerrado.",
+            "Así, la diversidad dejó de ser una excepción y pasó a formar parte del trabajo habitual.",
+            "Por ello se prohibió que los estudiantes compararan expresiones."
+          ],
+          "answer": 0,
+          "explanation": "El fragmento enlaza con el problema o la consecuencia desarrollados en el párrafo.",
+          "group": "B"
+        },
+        {
+          "id": "cl4-6",
+          "prompt": "Hueco [6] · Texto B",
+          "options": [
+            "Esa aparente neutralidad tiene consecuencias para quienes no se reconocen en el material.",
+            "Para evitarlo, incorporamos voces procedentes de distintos países.",
+            "No se trataba de sustituir un modelo único por otro igualmente cerrado.",
+            "Así, la diversidad dejó de ser una excepción y pasó a formar parte del trabajo habitual.",
+            "Por ello se prohibió que los estudiantes compararan expresiones."
+          ],
+          "answer": 1,
+          "explanation": "El fragmento enlaza con el problema o la consecuencia desarrollados en el párrafo.",
+          "group": "B"
+        },
+        {
+          "id": "cl4-7",
+          "prompt": "Hueco [7] · Texto B",
+          "options": [
+            "Esa aparente neutralidad tiene consecuencias para quienes no se reconocen en el material.",
+            "Para evitarlo, incorporamos voces procedentes de distintos países.",
+            "No se trataba de sustituir un modelo único por otro igualmente cerrado.",
+            "Así, la diversidad dejó de ser una excepción y pasó a formar parte del trabajo habitual.",
+            "Por ello se prohibió que los estudiantes compararan expresiones."
+          ],
+          "answer": 2,
+          "explanation": "El fragmento enlaza con el problema o la consecuencia desarrollados en el párrafo.",
+          "group": "B"
+        },
+        {
+          "id": "cl4-8",
+          "prompt": "Hueco [8] · Texto B",
+          "options": [
+            "Esa aparente neutralidad tiene consecuencias para quienes no se reconocen en el material.",
+            "Para evitarlo, incorporamos voces procedentes de distintos países.",
+            "No se trataba de sustituir un modelo único por otro igualmente cerrado.",
+            "Así, la diversidad dejó de ser una excepción y pasó a formar parte del trabajo habitual.",
+            "Por ello se prohibió que los estudiantes compararan expresiones."
+          ],
+          "answer": 3,
+          "explanation": "El fragmento enlaza con el problema o la consecuencia desarrollados en el párrafo.",
+          "group": "B"
+        }
+      ]
+    },
+    {
+      "id": "cl-5",
+      "skill": "lectura",
+      "order": 5,
+      "level": "C1",
+      "title": "Observar para comprender",
+      "instruction": "Elige la opción que completa cada hueco.",
+      "stimulus": "La observación docente solo resulta formativa [1] se convierte en una oportunidad para revisar decisiones. De poco sirve acumular descripciones [2] luego no se contrastan con las intenciones de quien enseña. No se trata de dictaminar si una clase ha sido buena o mala, [3] de comprender qué condiciones han favorecido determinadas interacciones.\nConviene que las preguntas [4] antes de entrar en el aula, para evitar que la atención se disperse. Ese acuerdo permite [5] la mirada en evidencias concretas, en vez de registrar impresiones generales. Por ejemplo, un observador puede anotar quién solicita aclaraciones, cómo responde el docente y qué ocurre después. Una secuencia así aporta más información que una etiqueta sobre la supuesta motivación del alumnado.\nAhora bien, ninguna nota es una reproducción transparente de lo ocurrido. Toda selección presupone un criterio y deja elementos al [6]. Reconocer esa limitación no invalida el registro; [7], obliga a discutirlo con otras perspectivas. La voz del profesor y la de los estudiantes pueden cuestionar una interpretación que parecía evidente. El desacuerdo no constituye un obstáculo si ayuda a formular hipótesis más precisas.\nLa devolución requiere además un clima en el que sea posible [8] sin temor a una sanción. Para ello es preferible describir una secuencia y preguntar por su intención [9] atribuir de inmediato una causa. Las preguntas abiertas invitan a reconstruir alternativas; las afirmaciones tajantes suelen cerrar esa posibilidad. La confianza profesional, lejos de excluir el rigor, permite examinar decisiones con mayor profundidad.\nTampoco basta con que el docente [10] una recomendación: necesita tiempo y condiciones para ponerla a prueba. Si se propone modificar una actividad, habrá que decidir qué evidencia permitirá valorar el cambio. Un nuevo ciclo de observación puede mostrar efectos inesperados y obligar a revisar la propuesta inicial. De ahí que la mejora no deba entenderse como una receta que otro profesional simplemente aplica.\nLa reflexión adquiere [11] cuando desemboca en decisiones contrastables y vuelve sobre sus consecuencias. Se mantiene abierta, por tanto, a la posibilidad de que una hipótesis razonable no funcione en otro contexto. [12], observar no equivale a vigilar: implica construir una explicación provisional y responsable de la práctica, junto con quienes participan en ella.",
+      "questions": [
+        {
+          "id": "cl5-1",
+          "prompt": "Hueco [1]",
+          "options": [
+            "aunque",
+            "pese a",
+            "cuando"
+          ],
+          "answer": 2,
+          "explanation": "La relación temporal-condicional pide «cuando»."
+        },
+        {
+          "id": "cl5-2",
+          "prompt": "Hueco [2]",
+          "options": [
+            "porque de",
+            "si",
+            "sino"
+          ],
+          "answer": 1,
+          "explanation": "«Si» introduce la condición que hace inútil acumular descripciones."
+        },
+        {
+          "id": "cl5-3",
+          "prompt": "Hueco [3]",
+          "options": [
+            "sino",
+            "pero",
+            "aunque"
+          ],
+          "answer": 0,
+          "explanation": "La estructura es «no se trata de..., sino de...»."
+        },
+        {
+          "id": "cl5-4",
+          "prompt": "Hueco [4]",
+          "options": [
+            "se acuerda",
+            "se acordarían",
+            "se acuerden"
+          ],
+          "answer": 2,
+          "explanation": "«Conviene que» exige subjuntivo y concordancia plural."
+        },
+        {
+          "id": "cl5-5",
+          "prompt": "Hueco [5]",
+          "options": [
+            "eludir",
+            "centrar",
+            "derrochar"
+          ],
+          "answer": 1,
+          "explanation": "La colocación adecuada es «centrar la mirada»."
+        },
+        {
+          "id": "cl5-6",
+          "prompt": "Hueco [6]",
+          "options": [
+            "margen",
+            "alcance",
+            "revés"
+          ],
+          "answer": 0,
+          "explanation": "«Dejar al margen» significa excluir de la selección."
+        },
+        {
+          "id": "cl5-7",
+          "prompt": "Hueco [7]",
+          "options": [
+            "por consiguiente que",
+            "a menos que",
+            "al contrario"
+          ],
+          "answer": 2,
+          "explanation": "Se rechaza que la limitación invalide el registro y se afirma lo contrario."
+        },
+        {
+          "id": "cl5-8",
+          "prompt": "Hueco [8]",
+          "options": [
+            "desentender",
+            "discrepar",
+            "disimularse"
+          ],
+          "answer": 1,
+          "explanation": "El contexto describe expresar un desacuerdo sin sanción."
+        },
+        {
+          "id": "cl5-9",
+          "prompt": "Hueco [9]",
+          "options": [
+            "en lugar de",
+            "a causa de",
+            "con tal de"
+          ],
+          "answer": 0,
+          "explanation": "Se propone preguntar en vez de atribuir una causa."
+        },
+        {
+          "id": "cl5-10",
+          "prompt": "Hueco [10]",
+          "options": [
+            "recibe",
+            "recibiría",
+            "reciba"
+          ],
+          "answer": 2,
+          "explanation": "La construcción «no basta con que» lleva subjuntivo."
+        },
+        {
+          "id": "cl5-11",
+          "prompt": "Hueco [11]",
+          "options": [
+            "turno",
+            "sentido",
+            "permiso"
+          ],
+          "answer": 1,
+          "explanation": "«Adquirir sentido» expresa que la reflexión cobra significado práctico."
+        },
+        {
+          "id": "cl5-12",
+          "prompt": "Hueco [12]",
+          "options": [
+            "En definitiva",
+            "Aun cuando",
+            "A condición de"
+          ],
+          "answer": 0,
+          "explanation": "El marcador introduce una conclusión global."
+        }
+      ]
+    },
+    {
+      "id": "ca-1",
+      "skill": "escucha",
+      "order": 1,
+      "level": "A1",
+      "title": "Llegar al taller",
+      "instruction": "Escucha la conversación y completa los cinco datos con el banco de opciones.",
+      "stimulus": "Hola, soy Elena. Estoy buscando el aula del taller de español. ¿Sabes dónde está? Sí, está en la segunda planta, al lado de la biblioteca. Yo también voy al taller. Me llamo Pablo. Encantada, Pablo. ¿Empieza a las tres? No, hoy empieza a las tres y media porque la profesora tiene una reunión antes. Tenemos tiempo para tomar algo. La cafetería está en la planta baja. ¿Quieres un café? Gracias, pero prefiero un té. Esta tarde tengo dos clases y no quiero beber más café. ¿Tienes ya el libro del taller? No hace falta comprarlo. La profesora nos da los textos en clase. Solo tenemos que traer un cuaderno y un bolígrafo. Qué bien. ¿Y cuánto dura el taller? Una hora. Después quiero ir a la biblioteca para devolver una novela. Si quieres, podemos ir juntos y buscar otro libro para practicar. Me parece buena idea. Primero vamos por el té y después subimos al aula.",
+      "questions": [
+        {
+          "id": "ca1-1",
+          "prompt": "El taller está en…",
+          "options": [
+            "la segunda planta",
+            "las tres y media",
+            "un té",
+            "un cuaderno",
+            "una hora",
+            "la primera planta",
+            "las tres",
+            "un café",
+            "dos horas",
+            "una novela nueva",
+            "el gimnasio",
+            "un diccionario",
+            "las cuatro",
+            "un zumo",
+            "la estación"
+          ],
+          "answer": 0,
+          "explanation": "La conversación ofrece este dato de forma explícita."
+        },
+        {
+          "id": "ca1-2",
+          "prompt": "Hoy empieza a…",
+          "options": [
+            "la segunda planta",
+            "las tres y media",
+            "un té",
+            "un cuaderno",
+            "una hora",
+            "la primera planta",
+            "las tres",
+            "un café",
+            "dos horas",
+            "una novela nueva",
+            "el gimnasio",
+            "un diccionario",
+            "las cuatro",
+            "un zumo",
+            "la estación"
+          ],
+          "answer": 1,
+          "explanation": "La conversación ofrece este dato de forma explícita."
+        },
+        {
+          "id": "ca1-3",
+          "prompt": "Elena prefiere tomar…",
+          "options": [
+            "la segunda planta",
+            "las tres y media",
+            "un té",
+            "un cuaderno",
+            "una hora",
+            "la primera planta",
+            "las tres",
+            "un café",
+            "dos horas",
+            "una novela nueva",
+            "el gimnasio",
+            "un diccionario",
+            "las cuatro",
+            "un zumo",
+            "la estación"
+          ],
+          "answer": 2,
+          "explanation": "La conversación ofrece este dato de forma explícita."
+        },
+        {
+          "id": "ca1-4",
+          "prompt": "Deben llevar…",
+          "options": [
+            "la segunda planta",
+            "las tres y media",
+            "un té",
+            "un cuaderno",
+            "una hora",
+            "la primera planta",
+            "las tres",
+            "un café",
+            "dos horas",
+            "una novela nueva",
+            "el gimnasio",
+            "un diccionario",
+            "las cuatro",
+            "un zumo",
+            "la estación"
+          ],
+          "answer": 3,
+          "explanation": "La conversación ofrece este dato de forma explícita."
+        },
+        {
+          "id": "ca1-5",
+          "prompt": "El taller dura…",
+          "options": [
+            "la segunda planta",
+            "las tres y media",
+            "un té",
+            "un cuaderno",
+            "una hora",
+            "la primera planta",
+            "las tres",
+            "un café",
+            "dos horas",
+            "una novela nueva",
+            "el gimnasio",
+            "un diccionario",
+            "las cuatro",
+            "un zumo",
+            "la estación"
+          ],
+          "answer": 4,
+          "explanation": "La conversación ofrece este dato de forma explícita."
+        }
+      ],
+      "audioSeconds": 300
+    },
+    {
+      "id": "ca-2",
+      "skill": "escucha",
+      "order": 2,
+      "level": "A2",
+      "title": "Una jornada de intercambio",
+      "instruction": "Escucha el aviso del campus y responde.",
+      "stimulus": "Atención a todos los estudiantes que participan en la jornada de intercambio. La actividad se celebrará el viernes en el edificio central del campus. Aunque en el primer mensaje indicamos que empezaríamos a las diez, finalmente abriremos las puertas a las nueve y media. Las actividades comenzarán a las diez y terminarán a las dos de la tarde. Os pedimos que lleguéis con tiempo para recoger vuestra tarjeta de grupo.\nLa jornada tiene dos partes. Por la mañana, estudiantes de diferentes países van a presentar juegos para aprender idiomas. No es una competición y no habrá premios: queremos compartir ideas que luego podáis utilizar en vuestras prácticas. Cada participante podrá probar tres juegos. Después de la pausa, los grupos prepararán una actividad juntos y la explicarán a los demás.\nLa inscripción es gratuita, pero es necesario rellenar el formulario antes del miércoles por la noche. Solo hay cuarenta plazas. Cuando recibáis la confirmación, comprobad que vuestro nombre aparece correctamente. No hace falta imprimir nada: en recepción bastará con enseñar el mensaje en el teléfono. Quienes no tengan teléfono podrán decir su nombre a la persona responsable de la lista.\nDurante la pausa habrá agua y fruta para todos. Si queréis comer algo más, debéis traerlo de casa, porque la cafetería estará cerrada. No llevéis ordenador: los materiales se prepararán en papel. Nosotros proporcionaremos tijeras, tarjetas y rotuladores. Recordad llevar una botella que podáis rellenar.\nPor último, si os habéis inscrito y no podéis asistir, escribid a la organización. Así podremos ofrecer vuestra plaza a otra persona. Después de la jornada recibiréis por correo un pequeño resumen con las propuestas de los grupos. Gracias por participar.",
+      "questions": [
+        {
+          "id": "ca2-1",
+          "prompt": "¿Cuál es el objetivo de la jornada?",
+          "options": [
+            "Elegir al mejor estudiante",
+            "Compartir juegos y propuestas para aprender idiomas",
+            "Vender manuales de español"
+          ],
+          "answer": 1,
+          "explanation": "La organización aclara que se comparten ideas, sin competición."
+        },
+        {
+          "id": "ca2-2",
+          "prompt": "¿A qué hora se abren las puertas?",
+          "options": [
+            "A las nueve y media",
+            "A las diez y media",
+            "A las dos"
+          ],
+          "answer": 0,
+          "explanation": "La apertura se adelanta a las nueve y media; las actividades empiezan a las diez."
+        },
+        {
+          "id": "ca2-3",
+          "prompt": "¿Qué hay que hacer antes del miércoles por la noche?",
+          "options": [
+            "Enviar el resumen",
+            "Pagar la entrada",
+            "Completar el formulario"
+          ],
+          "answer": 2,
+          "explanation": "La inscripción requiere rellenar el formulario."
+        },
+        {
+          "id": "ca2-4",
+          "prompt": "¿Qué material NO deben llevar?",
+          "options": [
+            "Una botella",
+            "Un ordenador",
+            "Comida si desean algo más"
+          ],
+          "answer": 1,
+          "explanation": "Se pide expresamente no llevar ordenador porque se trabajará en papel."
+        },
+        {
+          "id": "ca2-5",
+          "prompt": "Si no pueden asistir, deben…",
+          "options": [
+            "avisar a la organización",
+            "buscar personalmente un sustituto",
+            "pagar una penalización"
+          ],
+          "answer": 0,
+          "explanation": "Avisar permite ofrecer la plaza a otra persona."
+        }
+      ],
+      "audioSeconds": 420
+    },
+    {
+      "id": "ca-3",
+      "skill": "escucha",
+      "order": 3,
+      "level": "B1",
+      "title": "Voces de futuros docentes",
+      "instruction": "Relaciona cada intervención con una de las once ideas. Sobran tres opciones.",
+      "stimulus": "Intervención 1: En mi primera práctica preparé una presentación muy larga. Pensaba que las imágenes bastaban para mantener la atención, pero mis alumnos apenas hablaron. La semana siguiente reduje la explicación y organicé entrevistas por parejas. Entonces escuché sus preguntas y descubrí mejor lo que sabían. Aprendí que una clase activa no depende de la cantidad de diapositivas.\n\nIntervención 2: Cuando llegué al colegio, seguía al pie de la letra el plan que había escrito en casa. Un día falló el proyector y tuve que improvisar con unas tarjetas. La actividad funcionó mejor de lo esperado. Desde entonces llevo siempre una alternativa sencilla que no necesita tecnología. Me siento más tranquila aunque casi nunca tenga que utilizarla.\n\nIntervención 3: Una alumna hablaba muy poco durante las conversaciones en grupo. Pensé que no tenía interés, hasta que leí sus reflexiones escritas: comprendía todo y tenía ideas originales. Le ofrecí un minuto para preparar su intervención antes de hablar. Poco a poco empezó a participar. Ahora intento no confundir rapidez para responder con capacidad para aprender.\n\nIntervención 4: Me daba vergüenza pedir ayuda al tutor porque quería demostrar que podía hacerlo todo solo. Una actividad salió mal y decidí contárselo. Él me hizo preguntas y juntos encontramos otra forma de organizarla. Descubrí que compartir una dificultad no me hacía menos profesional. Ahora preparo las reuniones con ejemplos concretos de lo que necesito mejorar.\n\nIntervención 5: Usaba siempre las mismas canciones en mis clases, las que a mí me gustaban. Un grupo me propuso traer otras y explicar por qué las había elegido. Aparecieron ritmos y temas que yo no conocía. La conversación fue mucho más rica. Desde entonces dejo espacio para que el alumnado contribuya a seleccionar algunos materiales.\n\nIntervención 6: En la observación de una clase anoté muchas cosas sobre la profesora, pero casi nada sobre lo que hacían los alumnos. Mi tutora me preguntó en qué me basaba para decir que habían entendido. No supe responder. En la siguiente visita observé cómo resolvían una tarea y registré sus preguntas, sin escribir sus nombres.\n\nIntervención 7: Al corregir un texto marcaba todos los errores con rojo. El estudiante miraba la hoja unos segundos y la guardaba. Cambié de estrategia: seleccioné dos aspectos y le pedí que revisara el texto con una pequeña guía. La nueva versión mejoró mucho. Comprendí que una corrección sirve de poco si no abre una oportunidad de actuar.\n\nIntervención 8: Para un intercambio internacional preparé unas normas de conversación con mis compañeros. No queríamos que una persona ocupara todo el tiempo. Decidimos alternar las preguntas y comprobar que ambos habíamos entendido antes de cambiar de tema. Al final nos resultó más fácil participar. La fluidez también necesita acuerdos sobre cómo escucharnos.",
+      "questions": [
+        {
+          "id": "ca3-1",
+          "prompt": "Intervención 1",
+          "options": [
+            "Reduce su explicación para dar espacio a la interacción.",
+            "Prepara un plan alternativo sin tecnología.",
+            "Ofrece tiempo de preparación antes de hablar.",
+            "Aprende a solicitar apoyo profesional.",
+            "Incorpora materiales elegidos por el alumnado.",
+            "Recoge evidencias de la actividad de los estudiantes.",
+            "Convierte la corrección en una revisión del texto.",
+            "Acuerda turnos para equilibrar la conversación.",
+            "Decide cancelar definitivamente los intercambios.",
+            "Sustituye todas las tareas por exámenes.",
+            "Evita volver a hablar con su tutor."
+          ],
+          "answer": 0,
+          "explanation": "El relato describe esta decisión como aprendizaje principal."
+        },
+        {
+          "id": "ca3-2",
+          "prompt": "Intervención 2",
+          "options": [
+            "Reduce su explicación para dar espacio a la interacción.",
+            "Prepara un plan alternativo sin tecnología.",
+            "Ofrece tiempo de preparación antes de hablar.",
+            "Aprende a solicitar apoyo profesional.",
+            "Incorpora materiales elegidos por el alumnado.",
+            "Recoge evidencias de la actividad de los estudiantes.",
+            "Convierte la corrección en una revisión del texto.",
+            "Acuerda turnos para equilibrar la conversación.",
+            "Decide cancelar definitivamente los intercambios.",
+            "Sustituye todas las tareas por exámenes.",
+            "Evita volver a hablar con su tutor."
+          ],
+          "answer": 1,
+          "explanation": "El relato describe esta decisión como aprendizaje principal."
+        },
+        {
+          "id": "ca3-3",
+          "prompt": "Intervención 3",
+          "options": [
+            "Reduce su explicación para dar espacio a la interacción.",
+            "Prepara un plan alternativo sin tecnología.",
+            "Ofrece tiempo de preparación antes de hablar.",
+            "Aprende a solicitar apoyo profesional.",
+            "Incorpora materiales elegidos por el alumnado.",
+            "Recoge evidencias de la actividad de los estudiantes.",
+            "Convierte la corrección en una revisión del texto.",
+            "Acuerda turnos para equilibrar la conversación.",
+            "Decide cancelar definitivamente los intercambios.",
+            "Sustituye todas las tareas por exámenes.",
+            "Evita volver a hablar con su tutor."
+          ],
+          "answer": 2,
+          "explanation": "El relato describe esta decisión como aprendizaje principal."
+        },
+        {
+          "id": "ca3-4",
+          "prompt": "Intervención 4",
+          "options": [
+            "Reduce su explicación para dar espacio a la interacción.",
+            "Prepara un plan alternativo sin tecnología.",
+            "Ofrece tiempo de preparación antes de hablar.",
+            "Aprende a solicitar apoyo profesional.",
+            "Incorpora materiales elegidos por el alumnado.",
+            "Recoge evidencias de la actividad de los estudiantes.",
+            "Convierte la corrección en una revisión del texto.",
+            "Acuerda turnos para equilibrar la conversación.",
+            "Decide cancelar definitivamente los intercambios.",
+            "Sustituye todas las tareas por exámenes.",
+            "Evita volver a hablar con su tutor."
+          ],
+          "answer": 3,
+          "explanation": "El relato describe esta decisión como aprendizaje principal."
+        },
+        {
+          "id": "ca3-5",
+          "prompt": "Intervención 5",
+          "options": [
+            "Reduce su explicación para dar espacio a la interacción.",
+            "Prepara un plan alternativo sin tecnología.",
+            "Ofrece tiempo de preparación antes de hablar.",
+            "Aprende a solicitar apoyo profesional.",
+            "Incorpora materiales elegidos por el alumnado.",
+            "Recoge evidencias de la actividad de los estudiantes.",
+            "Convierte la corrección en una revisión del texto.",
+            "Acuerda turnos para equilibrar la conversación.",
+            "Decide cancelar definitivamente los intercambios.",
+            "Sustituye todas las tareas por exámenes.",
+            "Evita volver a hablar con su tutor."
+          ],
+          "answer": 4,
+          "explanation": "El relato describe esta decisión como aprendizaje principal."
+        },
+        {
+          "id": "ca3-6",
+          "prompt": "Intervención 6",
+          "options": [
+            "Reduce su explicación para dar espacio a la interacción.",
+            "Prepara un plan alternativo sin tecnología.",
+            "Ofrece tiempo de preparación antes de hablar.",
+            "Aprende a solicitar apoyo profesional.",
+            "Incorpora materiales elegidos por el alumnado.",
+            "Recoge evidencias de la actividad de los estudiantes.",
+            "Convierte la corrección en una revisión del texto.",
+            "Acuerda turnos para equilibrar la conversación.",
+            "Decide cancelar definitivamente los intercambios.",
+            "Sustituye todas las tareas por exámenes.",
+            "Evita volver a hablar con su tutor."
+          ],
+          "answer": 5,
+          "explanation": "El relato describe esta decisión como aprendizaje principal."
+        },
+        {
+          "id": "ca3-7",
+          "prompt": "Intervención 7",
+          "options": [
+            "Reduce su explicación para dar espacio a la interacción.",
+            "Prepara un plan alternativo sin tecnología.",
+            "Ofrece tiempo de preparación antes de hablar.",
+            "Aprende a solicitar apoyo profesional.",
+            "Incorpora materiales elegidos por el alumnado.",
+            "Recoge evidencias de la actividad de los estudiantes.",
+            "Convierte la corrección en una revisión del texto.",
+            "Acuerda turnos para equilibrar la conversación.",
+            "Decide cancelar definitivamente los intercambios.",
+            "Sustituye todas las tareas por exámenes.",
+            "Evita volver a hablar con su tutor."
+          ],
+          "answer": 6,
+          "explanation": "El relato describe esta decisión como aprendizaje principal."
+        },
+        {
+          "id": "ca3-8",
+          "prompt": "Intervención 8",
+          "options": [
+            "Reduce su explicación para dar espacio a la interacción.",
+            "Prepara un plan alternativo sin tecnología.",
+            "Ofrece tiempo de preparación antes de hablar.",
+            "Aprende a solicitar apoyo profesional.",
+            "Incorpora materiales elegidos por el alumnado.",
+            "Recoge evidencias de la actividad de los estudiantes.",
+            "Convierte la corrección en una revisión del texto.",
+            "Acuerda turnos para equilibrar la conversación.",
+            "Decide cancelar definitivamente los intercambios.",
+            "Sustituye todas las tareas por exámenes.",
+            "Evita volver a hablar con su tutor."
+          ],
+          "answer": 7,
+          "explanation": "El relato describe esta decisión como aprendizaje principal."
+        }
+      ],
+      "audioSeconds": 660
+    },
+    {
+      "id": "ca-4",
+      "skill": "escucha",
+      "order": 4,
+      "level": "B2",
+      "title": "Entrevista: acompañar sin dar recetas",
+      "instruction": "Escucha la entrevista y elige la respuesta que mejor recoge su sentido.",
+      "stimulus": "Entrevistadora: Hoy conversamos con Irene, profesora de español y mentora de estudiantes en prácticas. ¿Qué cambió cuando empezaste a observar tus clases?\nIrene: Al principio buscaba confirmación de que todo iba bien. Anotaba si había terminado las actividades y si el grupo parecía contento. Con el tiempo comprendí que eso no me decía mucho sobre lo que estaban aprendiendo. Empecé a recoger ejemplos de sus conversaciones y a comparar lo que podían hacer antes y después de una tarea.\nEntrevistadora: ¿Grababas todas las clases?\nIrene: No. Una grabación puede ayudar, pero no es imprescindible y exige consentimiento y protección de datos. A veces basta con conservar dos versiones anónimas de un texto o anotar una secuencia de preguntas. El instrumento depende de la pregunta que quieras responder, no al revés.\nEntrevistadora: Muchos futuros profesores sienten que deben corregir cada error. ¿Qué les aconsejas?\nIrene: Que piensen primero en la finalidad de la actividad. Si estamos negociando una decisión, interrumpir continuamente puede romper la conversación. Eso no significa renunciar a la precisión. Puedo recoger algunos ejemplos y trabajarlos después, cuando los estudiantes tengan ocasión de revisar su producción. Durante una actividad centrada en una forma concreta, la intervención puede ser distinta.\nEntrevistadora: ¿Y cómo eliges los materiales?\nIrene: Busco que permitan hacer algo con la lengua y que muestren experiencias diversas. Un texto auténtico no es automáticamente adecuado. Hay que considerar qué conocimientos presupone y qué apoyos necesita el grupo. Prefiero adaptar la tarea antes que borrar toda la complejidad del texto. Por ejemplo, unos alumnos pueden localizar información explícita y otros comparar puntos de vista sobre el mismo documento.\nEntrevistadora: ¿Eso no supone demasiado trabajo?\nIrene: Exige preparación, pero no hace falta diseñar cinco clases distintas. A veces basta con variar las preguntas o ofrecer una guía opcional. También se pueden compartir recursos entre compañeros, siempre que cada docente compruebe si encajan en su contexto. Copiar una actividad que funcionó en otro grupo no garantiza que funcione en el mío.\nEntrevistadora: Has hablado de colaboración. ¿Cómo funciona la relación con un estudiante en prácticas?\nIrene: Intento acordar qué vamos a observar antes de la clase. Después le pido que explique qué intentaba conseguir y qué le sorprendió. No empiezo con una lista de soluciones. Si yo doy una receta demasiado pronto, le quito la oportunidad de interpretar las evidencias. Mi experiencia puede ser útil, pero la conversación debe permitirnos revisar nuestras hipótesis a los dos.\nEntrevistadora: ¿Cómo sabes si ese acompañamiento sirve?\nIrene: Cuando la persona empieza a formular preguntas más precisas y a justificar sus decisiones, aunque la clase siga teniendo dificultades. No espero que todo salga perfecto. Una intervención razonada que luego se revisa puede enseñar más que una clase aparentemente impecable de la que nadie sabe explicar por qué funcionó.\nEntrevistadora: Entonces, ¿qué lugar ocupa la seguridad del profesor?\nIrene: Es necesaria, pero no consiste en tener siempre una respuesta. Para mí significa poder reconocer una duda, buscar ayuda y volver al aula con una propuesta que pueda ponerse a prueba.",
+      "questions": [
+        {
+          "id": "ca4-1",
+          "prompt": "¿Qué limitación reconoce en sus primeras observaciones?",
+          "options": [
+            "Se centraban en terminar actividades y en impresiones",
+            "Incluían demasiadas voces del alumnado",
+            "Solo utilizaban textos escritos"
+          ],
+          "answer": 0,
+          "explanation": "Irene distingue impresiones de evidencias de aprendizaje."
+        },
+        {
+          "id": "ca4-2",
+          "prompt": "¿Qué criterio debe orientar el instrumento de observación?",
+          "options": [
+            "El precio del equipo",
+            "La pregunta que se quiere responder",
+            "La costumbre de grabar siempre"
+          ],
+          "answer": 1,
+          "explanation": "Dice que el instrumento depende de la pregunta."
+        },
+        {
+          "id": "ca4-3",
+          "prompt": "¿Qué propone durante una tarea de negociación?",
+          "options": [
+            "Ignorar la precisión para siempre",
+            "Interrumpir cada frase",
+            "Posponer algunas correcciones para permitir la interacción"
+          ],
+          "answer": 2,
+          "explanation": "Puede recoger ejemplos y trabajarlos después."
+        },
+        {
+          "id": "ca4-4",
+          "prompt": "Un texto auténtico…",
+          "options": [
+            "necesita una valoración de su adecuación y de los apoyos",
+            "sirve por igual para cualquier grupo",
+            "debe simplificarse hasta eliminar toda complejidad"
+          ],
+          "answer": 0,
+          "explanation": "La autenticidad por sí sola no garantiza adecuación."
+        },
+        {
+          "id": "ca4-5",
+          "prompt": "¿Cómo diferencia una actividad?",
+          "options": [
+            "Separando siempre al alumnado en cinco clases",
+            "Variando preguntas y apoyos sobre un documento común",
+            "Dando el mismo apoyo obligatorio a todos"
+          ],
+          "answer": 1,
+          "explanation": "Ofrece preguntas distintas o una guía opcional."
+        },
+        {
+          "id": "ca4-6",
+          "prompt": "¿Por qué evita dar recetas al comenzar la devolución?",
+          "options": [
+            "Porque no tiene experiencia",
+            "Porque no observa las clases",
+            "Para dejar que el estudiante interprete las evidencias"
+          ],
+          "answer": 2,
+          "explanation": "Las soluciones tempranas pueden impedir la interpretación propia."
+        },
+        {
+          "id": "ca4-7",
+          "prompt": "¿Qué señal de progreso considera importante?",
+          "options": [
+            "Formular preguntas precisas y justificar decisiones",
+            "No volver a tener dificultades",
+            "Cumplir un plan sin revisarlo"
+          ],
+          "answer": 0,
+          "explanation": "El progreso se aprecia en el razonamiento profesional."
+        },
+        {
+          "id": "ca4-8",
+          "prompt": "Para Irene, la seguridad profesional implica…",
+          "options": [
+            "ocultar cualquier duda",
+            "reconocer dudas y poner a prueba propuestas",
+            "trabajar sin pedir ayuda"
+          ],
+          "answer": 1,
+          "explanation": "Relaciona seguridad con reconocer dudas y buscar ayuda."
+        }
+      ],
+      "audioSeconds": 720
+    },
+    {
+      "id": "ca-5",
+      "skill": "escucha",
+      "order": 5,
+      "level": "C1",
+      "title": "Innovación y responsabilidad",
+      "instruction": "Escucha los seis fragmentos y reconoce su argumento.",
+      "stimulus": "Fragmento uno. Se suele identificar innovación con el uso de una herramienta reciente. Esa asociación resulta cómoda porque hace visible el cambio, pero desplaza la pregunta fundamental: qué problema educativo se intenta resolver. Una plataforma puede reproducir exactamente la misma secuencia de ejercicios que ya existía en papel. Su novedad técnica no garantiza que amplíe las posibilidades de participación ni que ayude a comprender mejor. Antes de elegir un recurso conviene formular el propósito y decidir qué evidencia permitiría valorar su contribución.\n\nFragmento dos. Tampoco es razonable exigir que una tecnología produzca por sí sola una mejora medible e inmediata. Los efectos dependen de las tareas, de las condiciones de acceso y de las decisiones del docente. Evaluar un recurso fuera de ese entramado lleva a atribuirle virtudes o defectos que quizá correspondan a su implementación. Por eso interesa describir cómo se usa, quién puede intervenir y qué apoyos recibe, además de contar cuántas veces se abre una aplicación.\n\nFragmento tres. El acceso no se reduce a disponer de un dispositivo. Una actividad puede excluir a quienes necesitan más tiempo para leer, no pueden escuchar un audio en casa o dependen de una conexión inestable. Ofrecer una alternativa accesible no supone rebajar necesariamente el objetivo. Supone distinguir la capacidad que queremos trabajar de las barreras accidentales que hemos añadido al medio. Si evaluamos comprensión auditiva, la transcripción cambia la tarea; si evaluamos una argumentación, quizá no la cambie.\n\nFragmento cuatro. Los datos que una plataforma recoge tampoco equivalen sin más a aprendizaje. Un tiempo de permanencia largo puede indicar interés, pero también confusión o una interrupción doméstica. Interpretarlo exige combinar indicadores y escuchar a las personas implicadas. La precisión numérica de un registro no elimina la ambigüedad de su significado. Conviene preguntarse qué dimensiones quedan fuera del recuento y evitar decisiones de consecuencias importantes basadas en un único indicador automático.\n\nFragmento cinco. La responsabilidad profesional incluye decidir qué datos no hace falta recoger. Pedir grabaciones identificables para cada ejercicio puede generar riesgos innecesarios si basta con una muestra anónima o una autoevaluación. La minimización no es enemiga de la investigación: ayuda a justificar por qué un dato resulta necesario y durante cuánto tiempo debe conservarse. También obliga a explicar de manera comprensible quién tendrá acceso y qué opciones tiene el estudiante cuando no desea compartirlo.\n\nFragmento seis. En definitiva, el debate no debería organizarse como una elección entre entusiasmo incondicional y rechazo absoluto. Una postura crítica permite experimentar y, al mismo tiempo, revisar las consecuencias de lo que se introduce. La pregunta no es si el aula contiene más pantallas, sino si quienes participan disponen de mejores oportunidades para aprender y actuar. Mantener esa pregunta abierta exige observar prácticas concretas y aceptar que una solución útil hoy quizá deba modificarse mañana.",
+      "questions": [
+        {
+          "id": "ca5-1",
+          "prompt": "En el fragmento 1 se cuestiona…",
+          "options": [
+            "que la novedad técnica equivalga a mejora educativa",
+            "que sea necesario definir objetivos",
+            "que las herramientas puedan usarse en papel"
+          ],
+          "answer": 0,
+          "explanation": "Se distingue novedad visible de valor pedagógico."
+        },
+        {
+          "id": "ca5-2",
+          "prompt": "En el fragmento 2, evaluar implica…",
+          "options": [
+            "aislar el recurso de toda práctica",
+            "examinar las condiciones de uso",
+            "medir solo las aperturas de la aplicación"
+          ],
+          "answer": 1,
+          "explanation": "Los efectos dependen de tareas, acceso y decisiones."
+        },
+        {
+          "id": "ca5-3",
+          "prompt": "En el fragmento 3, una alternativa accesible…",
+          "options": [
+            "siempre rebaja el objetivo",
+            "nunca modifica lo evaluado",
+            "debe valorarse según la capacidad que se trabaja"
+          ],
+          "answer": 2,
+          "explanation": "La transcripción cambia una tarea auditiva, pero no necesariamente una de argumentación."
+        },
+        {
+          "id": "ca5-4",
+          "prompt": "En el fragmento 4 se advierte que…",
+          "options": [
+            "un indicador preciso puede admitir varias interpretaciones",
+            "los números nunca aportan información",
+            "el tiempo de permanencia demuestra siempre interés"
+          ],
+          "answer": 0,
+          "explanation": "La precisión del dato no elimina su ambigüedad."
+        },
+        {
+          "id": "ca5-5",
+          "prompt": "En el fragmento 5, minimizar datos significa…",
+          "options": [
+            "renunciar a toda investigación",
+            "recoger solo lo necesario y justificar su conservación",
+            "exigir grabaciones de cada actividad"
+          ],
+          "answer": 1,
+          "explanation": "Se defiende necesidad, finalidad y tiempo de retención."
+        },
+        {
+          "id": "ca5-6",
+          "prompt": "La conclusión del fragmento 6 propone…",
+          "options": [
+            "rechazar toda tecnología",
+            "aumentar pantallas como fin",
+            "experimentar con una actitud crítica y revisable"
+          ],
+          "answer": 2,
+          "explanation": "La conclusión evita entusiasmo y rechazo absolutos."
+        }
+      ],
+      "audioSeconds": 660
+    },
+    {
+      "id": "ca-6",
+      "skill": "escucha",
+      "order": 6,
+      "level": "C1",
+      "title": "Evaluar para aprender",
+      "instruction": "Selecciona exactamente seis ideas expresadas en la conferencia.",
+      "stimulus": "Quisiera empezar con una escena frecuente: un estudiante recibe una nota y pregunta cuántos puntos necesita para aprobar. La pregunta es legítima, pero nos recuerda que una calificación puede convertirse en el centro de la actividad y desplazar el aprendizaje que pretendía describir. No propongo eliminar toda evaluación; propongo examinar qué oportunidades de actuación abre después de comunicar un resultado.\nUna devolución formativa debe ofrecer información que el estudiante pueda utilizar. Decir que un texto es poco coherente resulta insuficiente si no se muestra dónde se pierde el hilo y qué decisión podría mejorar la relación entre las ideas. Esto no significa reescribir el texto por su autor. Significa ayudarle a reconocer un problema y a ensayar una solución propia. La tarea posterior es tan importante como el comentario recibido.\nAdemás, no todos los aspectos de una producción tienen que corregirse al mismo tiempo. Elegir un foco permite una revisión más consciente y evita que una página cubierta de marcas resulte inabordable. Esa selección debe explicitarse para que el estudiante no interprete el silencio sobre otros aspectos como una confirmación de que todo está resuelto. En otro momento podrá revisarse un foco distinto.\nLa autoevaluación tampoco consiste en adivinar la nota que pondría el profesor. Se aprende comparando evidencias con criterios comprensibles y justificando las diferencias entre versiones. Por ejemplo, conservar un primer borrador y una revisión permite observar decisiones concretas: añadir un ejemplo, reorganizar un párrafo o ajustar una forma de tratamiento. Un portafolio adquiere valor cuando hace visibles esas decisiones, no cuando acumula archivos sin comentario.\nEl trabajo con compañeros puede ampliar las perspectivas, siempre que se prepare. Antes de pedir una revisión entre iguales conviene analizar ejemplos y practicar cómo formular observaciones respetuosas y específicas. Compartir un criterio no obliga a producir textos idénticos. Al contrario, permite discutir soluciones diferentes que cumplen un mismo propósito comunicativo. El desacuerdo razonado puede convertirse en una fuente de aprendizaje.\nPor último, debemos reconocer los límites de los resultados. Una muestra depende del tema, del tiempo disponible y de las ayudas utilizadas. No basta para describir toda la competencia de una persona. Combinar tareas y fuentes de evidencia reduce algunas limitaciones, aunque no elimina la necesidad de juicio profesional. Cuando una decisión tiene consecuencias importantes, la responsabilidad de justificarla no puede trasladarse sin más a una herramienta automática.\nEn síntesis, evaluar para aprender exige diseñar qué sucede después de la devolución. Si el estudiante solo archiva una nota, quizá habremos informado, pero no habremos creado todavía una oportunidad de mejora. Reservar tiempo para revisar, comparar y volver a intentar convierte los criterios en instrumentos de acción y permite que la evaluación forme parte de la experiencia de aprender.",
+      "questions": [
+        {
+          "id": "ca6-1",
+          "prompt": "La devolución necesita una oportunidad posterior de revisión.",
+          "options": [
+            "No seleccionada",
+            "Seleccionada"
+          ],
+          "answer": 1,
+          "explanation": "La conferencia defiende esta idea."
+        },
+        {
+          "id": "ca6-2",
+          "prompt": "Elegir un foco puede hacer más útil la corrección.",
+          "options": [
+            "No seleccionada",
+            "Seleccionada"
+          ],
+          "answer": 1,
+          "explanation": "La conferencia defiende esta idea."
+        },
+        {
+          "id": "ca6-3",
+          "prompt": "Un portafolio debe mostrar decisiones entre versiones.",
+          "options": [
+            "No seleccionada",
+            "Seleccionada"
+          ],
+          "answer": 1,
+          "explanation": "La conferencia defiende esta idea."
+        },
+        {
+          "id": "ca6-4",
+          "prompt": "La revisión entre iguales requiere preparación.",
+          "options": [
+            "No seleccionada",
+            "Seleccionada"
+          ],
+          "answer": 1,
+          "explanation": "La conferencia defiende esta idea."
+        },
+        {
+          "id": "ca6-5",
+          "prompt": "Una sola muestra no describe toda la competencia.",
+          "options": [
+            "No seleccionada",
+            "Seleccionada"
+          ],
+          "answer": 1,
+          "explanation": "La conferencia defiende esta idea."
+        },
+        {
+          "id": "ca6-6",
+          "prompt": "Las decisiones importantes requieren juicio profesional.",
+          "options": [
+            "No seleccionada",
+            "Seleccionada"
+          ],
+          "answer": 1,
+          "explanation": "La conferencia defiende esta idea."
+        },
+        {
+          "id": "ca6-7",
+          "prompt": "Toda evaluación debe desaparecer del aula.",
+          "options": [
+            "No seleccionada",
+            "Seleccionada"
+          ],
+          "answer": 0,
+          "explanation": "La conferencia rechaza esta afirmación o no la sostiene."
+        },
+        {
+          "id": "ca6-8",
+          "prompt": "La autoevaluación sirve para adivinar la nota.",
+          "options": [
+            "No seleccionada",
+            "Seleccionada"
+          ],
+          "answer": 0,
+          "explanation": "La conferencia rechaza esta afirmación o no la sostiene."
+        },
+        {
+          "id": "ca6-9",
+          "prompt": "El profesor debe reescribir todos los textos.",
+          "options": [
+            "No seleccionada",
+            "Seleccionada"
+          ],
+          "answer": 0,
+          "explanation": "La conferencia rechaza esta afirmación o no la sostiene."
+        },
+        {
+          "id": "ca6-10",
+          "prompt": "Los criterios obligan a producir textos idénticos.",
+          "options": [
+            "No seleccionada",
+            "Seleccionada"
+          ],
+          "answer": 0,
+          "explanation": "La conferencia rechaza esta afirmación o no la sostiene."
+        },
+        {
+          "id": "ca6-11",
+          "prompt": "Cuantas más marcas rojas haya, mejor se aprende.",
+          "options": [
+            "No seleccionada",
+            "Seleccionada"
+          ],
+          "answer": 0,
+          "explanation": "La conferencia rechaza esta afirmación o no la sostiene."
+        },
+        {
+          "id": "ca6-12",
+          "prompt": "Los resultados automáticos eliminan la incertidumbre.",
+          "options": [
+            "No seleccionada",
+            "Seleccionada"
+          ],
+          "answer": 0,
+          "explanation": "La conferencia rechaza esta afirmación o no la sostiene."
+        }
+      ],
+      "audioSeconds": 660,
+      "maxSelections": 6
+    },
+    {
+      "id": "eie-1",
+      "skill": "escritura",
+      "order": 1,
+      "level": "B1",
+      "title": "Responder a un correo",
+      "instruction": "Responde al mensaje: saluda, acepta o rechaza la invitación con una razón, cuenta una experiencia de prácticas, propone una actividad y despídete.",
+      "stimulus": "Hola: el próximo mes recibiremos a un grupo de estudiantes de español. Nos gustaría que participaras en una tarde de actividades. ¿Puedes venir? Cuéntanos cómo te ha ido en tus prácticas y qué podrías preparar para el grupo. Un abrazo, Sara.",
+      "questions": [],
+      "words": [
+        100,
+        150
+      ]
+    },
+    {
+      "id": "eie-2",
+      "skill": "escritura",
+      "order": 2,
+      "level": "C1",
+      "title": "Defender una propuesta",
+      "instruction": "Elige una opción y desarrolla una postura con argumentos, ejemplos, una objeción y una conclusión. Respeta el género y el destinatario.",
+      "stimulus": "",
+      "questions": [],
+      "words": [
+        250,
+        300
+      ],
+      "choices": [
+        {
+          "title": "A · Artículo de opinión",
+          "stimulus": "Una revista educativa abre un debate: «¿Debe el alumnado participar en la elección de los materiales de idiomas?». Algunos docentes defienden que aumenta la motivación y permite representar experiencias diversas; otros temen perder continuidad y profundidad. Escribe un artículo para la revista en el que valores ambas perspectivas y defiendas una propuesta concreta."
+        },
+        {
+          "title": "B · Carta a la redacción",
+          "stimulus": "Un periódico local informa de que varios centros quieren sustituir una parte de las pruebas escritas por portafolios digitales. La propuesta ha suscitado preguntas sobre equidad, privacidad y carga de trabajo. Escribe una carta a la redacción en la que expreses tu posición, respondas a una objeción y propongas condiciones para una aplicación responsable."
+        }
+      ]
+    },
+    {
+      "id": "eio-1",
+      "skill": "oral",
+      "order": 1,
+      "level": "A1",
+      "title": "Hablar de ti",
+      "instruction": "Escucha y responde a las cuatro preguntas. Se guarda una grabación por respuesta.",
+      "stimulus": "",
+      "questions": [],
+      "prompts": [
+        "¿Cómo te llamas y dónde vives?",
+        "¿Qué haces normalmente por la mañana?",
+        "¿Qué te gusta de aprender español y por qué?",
+        "Cuéntame una actividad que hiciste la semana pasada."
+      ],
+      "preparation": 10,
+      "duration": 30
+    },
+    {
+      "id": "eio-2",
+      "skill": "oral",
+      "order": 2,
+      "level": "A2",
+      "title": "Describir una escena",
+      "instruction": "Elige una de las dos escenas. Describe a las personas, lo que hacen, el lugar y lo que crees que ocurrirá después. Ilustraciones originales de práctica; el formato oficial utiliza fotografías.",
+      "stimulus": "",
+      "questions": [],
+      "choices": [
+        {
+          "title": "A · Trabajo en el aula",
+          "stimulus": "Un grupo prepara una actividad en una mesa.",
+          "image": "scene-classroom.svg"
+        },
+        {
+          "title": "B · Una pausa en el campus",
+          "stimulus": "Dos estudiantes conversan en una cafetería.",
+          "image": "scene-cafe.svg"
+        }
+      ],
+      "prompts": [
+        "Describe la escena que has elegido."
+      ],
+      "preparation": 60,
+      "duration": 90
+    },
+    {
+      "id": "eio-3",
+      "skill": "oral",
+      "order": 3,
+      "level": "B1",
+      "title": "Resolver dos situaciones",
+      "instruction": "Selecciona una situación personal y otra pública. Explica el problema, pide o proporciona información y propone una solución.",
+      "stimulus": "",
+      "questions": [],
+      "choices": [
+        {
+          "title": "Personal A · Cambiar un plan",
+          "stimulus": "Habías quedado con una amiga para estudiar. Te han cambiado el horario de prácticas. Deja un mensaje, explica el cambio y propone otra fecha."
+        },
+        {
+          "title": "Personal B · Pedir ayuda",
+          "stimulus": "No puedes asistir a una reunión de grupo. Pide a un compañero que te informe de los acuerdos y ofrece una forma de contribuir."
+        },
+        {
+          "title": "Pública A · Solicitar información",
+          "stimulus": "Llama a un centro cultural para organizar una visita con tu clase. Pregunta por horarios, coste y actividades adecuadas."
+        },
+        {
+          "title": "Pública B · Resolver una incidencia",
+          "stimulus": "Has reservado una sala para un taller, pero está ocupada. Explica la situación a recepción y solicita una alternativa."
+        }
+      ],
+      "prompts": [
+        "Responde a la situación personal elegida.",
+        "Responde a la situación pública elegida."
+      ],
+      "preparation": 30,
+      "duration": 60
+    },
+    {
+      "id": "eio-4",
+      "skill": "oral",
+      "order": 4,
+      "level": "B2",
+      "title": "Opinar y explicar",
+      "instruction": "Elige un tema, lee el texto y responde a tres preguntas. La tarea siguiente conservará el tema elegido.",
+      "stimulus": "",
+      "questions": [],
+      "choices": [
+        {
+          "title": "A · Autonomía y proyectos",
+          "stimulus": "Algunos centros educativos quieren reservar una parte de la semana para proyectos en los que el alumnado elija un problema de su entorno y trabaje en equipo para investigarlo. Sus defensores consideran que así se relacionan los contenidos con situaciones reales y se desarrollan habilidades de cooperación. Otros docentes señalan que la autonomía exige apoyos, tiempo y criterios claros para no aumentar las desigualdades de participación. El debate plantea cómo combinar una estructura común con oportunidades de decisión y cómo reconocer la contribución individual dentro de un producto colectivo."
+        },
+        {
+          "title": "B · IA en el aprendizaje",
+          "stimulus": "Las herramientas de inteligencia artificial permiten producir borradores, resumir textos y recibir comentarios de manera inmediata. En las clases de idiomas pueden abrir oportunidades para practicar, pero también suscitan dudas sobre dependencia, privacidad y autoría. Algunos profesores proponen enseñar a contrastar sus respuestas y a explicar las decisiones tomadas al utilizarlas. Otros consideran preferible limitar su presencia mientras se desarrollan habilidades básicas. La cuestión incluye cómo evaluar una producción cuando ha habido ayuda tecnológica y qué condiciones permitirían usar esa ayuda de forma transparente y responsable."
+        }
+      ],
+      "prompts": [
+        "¿Qué ventajas y dificultades ves en dar más autonomía al alumnado?",
+        "¿Cómo evitarías que en un grupo unas personas participen más que otras?",
+        "¿Qué evidencia buscarías para valorar si un proyecto ayuda a aprender?"
+      ],
+      "alternativePrompts": [
+        "¿Qué oportunidades y riesgos ves en utilizar IA para aprender idiomas?",
+        "¿Cómo explicarías a tus alumnos un uso responsable de estas herramientas?",
+        "¿Qué cambiarías en la evaluación para reconocer el aprendizaje propio?"
+      ],
+      "preparation": 30,
+      "duration": 60
+    },
+    {
+      "id": "eio-5",
+      "skill": "oral",
+      "order": 5,
+      "level": "C1",
+      "title": "Argumentar una postura",
+      "instruction": "Mantén el tema de la tarea 4 y elige una afirmación. Defiende o cuestiona la idea con argumentos, matices y ejemplos.",
+      "stimulus": "",
+      "questions": [],
+      "choices": [
+        {
+          "title": "A · Autonomía",
+          "stimulus": "El alumnado aprende mejor cuando decide los objetivos y materiales de sus proyectos."
+        },
+        {
+          "title": "B · Autonomía",
+          "stimulus": "Una estructura común definida por el docente es la mejor garantía de igualdad."
+        },
+        {
+          "title": "A · IA",
+          "stimulus": "Aprender a utilizar IA críticamente debe formar parte de la educación lingüística."
+        },
+        {
+          "title": "B · IA",
+          "stimulus": "Limitar la IA es necesario para proteger el desarrollo de una voz propia."
+        }
+      ],
+      "prompts": [
+        "Desarrolla tu argumentación y termina con una conclusión."
+      ],
+      "preparation": 60,
+      "duration": 180
+    }
+  ]
+}

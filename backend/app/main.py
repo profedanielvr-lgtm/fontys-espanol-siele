@@ -1,4 +1,6 @@
 from contextlib import asynccontextmanager
+from contextlib import suppress
+import asyncio
 from pathlib import Path
 from typing import Literal
 from uuid import uuid4
@@ -12,6 +14,12 @@ from .database import Base, engine, get_db, SessionLocal
 from .models import Pregunta, IntentoExamen, RespuestaUsuario
 from .schemas import CrearIntento, Escritura, Resultado, EvaluarTarea
 from .evaluation import evaluate, EvaluationUnavailable, RUBRICA_VERSION
+from .guards import RequestGuard, quota
+from .secure_exam import router as secure_router
+from .bank import get_task,stimulus
+from .media import receive_audio
+from .oral_evaluation import evaluate_oral
+from .cleanup import cleanup_expired
 
 @asynccontextmanager
 async def lifespan(_):
@@ -29,14 +37,39 @@ async def lifespan(_):
                     metadatos_calibracion={'calibrado':False,'origen':'original','nivel_objetivo':nivel}))
             db.add(Pregunta(destreza='oral', nivel_mcer='A2', contenido_estimulo='Describe tu rutina y explica qué te gustaría cambiar. Tienes dos minutos.', metadatos_calibracion={'calibrado':False,'duracion_segundos':120}))
             db.commit()
-    yield
+    async def cleanup_loop():
+        while True:
+            await asyncio.sleep(3600)
+            await asyncio.to_thread(cleanup_expired)
+    cleaner=asyncio.create_task(cleanup_loop())
+    try:yield
+    finally:
+        cleaner.cancel()
+        with suppress(asyncio.CancelledError):await cleaner
 
 app = FastAPI(title='Práctica de español A1–C1', lifespan=lifespan)
-app.add_middleware(CORSMiddleware, allow_origins=[settings.frontend_origin], allow_methods=['GET','POST'], allow_headers=['Content-Type'])
+app.add_middleware(RequestGuard)
+app.add_middleware(CORSMiddleware, allow_origins=[settings.frontend_origin], allow_methods=['GET','POST','DELETE'], allow_headers=['Content-Type','Authorization'])
+app.include_router(secure_router)
+
+@app.post('/api/evaluar-audio',dependencies=[Depends(quota)])
+async def evaluar_audio(task_id:Literal['eio-1','eio-2','eio-3','eio-4','eio-5']=Form(),parte:int=Form(ge=0,le=3),
+                        opcion:int=Form(default=0,ge=0,le=1),tema:int=Form(default=0,ge=0,le=1),archivo:UploadFile=File()):
+    task=get_task(task_id)
+    try:consigna=stimulus(task,opcion,parte,tema,opcion)
+    except ValueError as exc:await archivo.close();raise HTTPException(422,'Consigna inválida / Ongeldige taak') from exc
+    ext={'audio/webm':'.webm','audio/ogg':'.ogg','audio/mp4':'.mp4','audio/wav':'.wav','audio/x-wav':'.wav'}.get((archivo.content_type or '').split(';')[0],'.invalid')
+    target=settings.upload_dir/(uuid4().hex+ext)
+    try:
+        quality=await receive_audio(archivo,target)
+        result=await evaluate_oral(target,consigna,quality)
+        return result
+    except EvaluationUnavailable as exc:raise HTTPException(503,str(exc)) from exc
+    finally:target.unlink(missing_ok=True)
 
 @app.get('/api/salud')
 def salud():
-    return {'estado':'ok','modo':settings.ai_mode,'uso':'formativo no oficial'}
+    return {'estado':'ok','modo':settings.ai_mode,'uso':'formativo no oficial','secure_sessions':True,'ai_configured':bool(settings.ai_mode=='openai' and settings.openai_api_key)}
 
 @app.get('/api/preguntas')
 def preguntas(db: Session = Depends(get_db)):
@@ -59,7 +92,7 @@ def comprobar(db, intento_id, pregunta_id, destreza):
         raise HTTPException(422, 'Destreza incompatible')
     return pregunta
 
-@app.post('/api/evaluar-escritura', response_model=Resultado)
+@app.post('/api/evaluar-escritura', response_model=Resultado,dependencies=[Depends(quota)])
 async def escritura(body: Escritura, db: Session = Depends(get_db)):
     pregunta = comprobar(db, body.intento_id, body.pregunta_id, 'escritura')
     if not body.texto.strip():
@@ -75,7 +108,7 @@ async def escritura(body: Escritura, db: Session = Depends(get_db)):
     db.add(respuesta); db.commit()
     return {'respuesta_id':respuesta.id, **registro}
 
-@app.post('/api/evaluar-tarea')
+@app.post('/api/evaluar-tarea',dependencies=[Depends(quota)])
 async def evaluar_tarea(body: EvaluarTarea):
     """Adaptador opcional del frontend estático; no guarda datos personales."""
     if not body.texto.strip():

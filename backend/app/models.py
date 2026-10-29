@@ -31,3 +31,18 @@ class RespuestaUsuario(Base):
     respuesta_dada: Mapped[str] = mapped_column(Text)
     calificacion_ia: Mapped[dict | None] = mapped_column(JSON, nullable=True)
     retroalimentacion_ia: Mapped[str | None] = mapped_column(Text, nullable=True)
+
+class ExamTicket(Base):
+    __tablename__='exam_ticket'
+    code_hash: Mapped[str]=mapped_column(String(64),primary_key=True)
+    modality: Mapped[str]=mapped_column(String(16))
+    expires_at: Mapped[float]=mapped_column(Float)
+    used: Mapped[int]=mapped_column(default=0)
+
+class SecureAttempt(Base):
+    __tablename__='secure_attempt'
+    id: Mapped[str]=mapped_column(String(36),primary_key=True)
+    token_hash: Mapped[str]=mapped_column(String(64),unique=True)
+    expires_at: Mapped[float]=mapped_column(Float)
+    revision: Mapped[int]=mapped_column(default=0)
+    data: Mapped[dict]=mapped_column(JSON)

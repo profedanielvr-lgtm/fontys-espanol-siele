@@ -9,3 +9,5 @@ dist/
 .packages/
 .pnpm-store/
 .test-run-*/
+private-bank*.json
+exam-tickets*.txt

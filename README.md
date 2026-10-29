@@ -1,3 +1,46 @@
+> **Actualización v3 — ES/NL, sesiones controladas y evaluación productiva.** Lee primero [Investigación y seguridad](INVESTIGACION-Y-SEGURIDAD.md). La web publicada sigue siendo estática: la IA real y el control de tiempo desde servidor requieren conectar un backend HTTPS. La pantalla de Preferencias distingue expresamente conexión ausente, demostración y proveedor configurado. Las funciones y límites de v3 de este bloque sustituyen las descripciones históricas de v2 que aparecen más abajo.
+
+## Novedades v3 / Nieuw in v3
+
+- Selector ES / NL / ES+NL, instrucciones bilingües explícitas en las 18 tareas y avisos procedimentales. Los estímulos y respuestas lingüísticas siguen en español.
+- Página de protocolos de examen y privacidad. Las incidencias de foco no generan acusaciones ni descuentos automáticos. Sin cámara ni biometría.
+- Rúbrica `formativa-mcer-2.0`: evidencias verificables, feedback ES/NL, abstención y propuesta pendiente de revisión humana.
+- `POST /api/evaluar-audio`: en desarrollo, decodifica, comprueba duración/silencio, transcribe y propone análisis parcial. Audio temporal eliminado después. `pronunciacion`, `fluidez` y `nivel_oral_global` permanecen null. El original local y el análisis parcial pueden conservarse en el portafolio.
+- Modo `/api/secure/*`: códigos de un uso, tokens de 256 bits almacenados como hash, caducidad, control de revisiones, reloj y secuencia de servidor, recepción autorizada y archivos privados. El frontend no decide la puntuación de este modo.
+- Producción bloquea las rutas antiguas sin autorización y exige `SECURE_BANK_PATH` con un banco privado distinto al material público. Un código autoriza acceso, no verifica identidad.
+- El decodificador nativo FFmpeg/ffprobe se instala en Docker. Los procesos tienen límite temporal y no usan shell. No se ha realizado una auditoría de penetración ni un estudio psicométrico.
+
+### Probar el modo de servidor
+
+Desde `backend`, instalar requisitos y disponer de FFmpeg y ffprobe en PATH. En Windows indicar las rutas absolutas en `.env` si procede. Para una prueba local:
+
+```powershell
+$env:ENVIRONMENT='development'
+$env:FRONTEND_ORIGIN='http://localhost:5173'
+.venv\Scripts\python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
+# En una segunda terminal, desde backend, con la misma DATABASE_URL:
+.venv\Scripts\python -m app.issue_ticket --modality S2 --hours 1
+```
+
+El último comando emite un código aleatorio **privado**. Entregarlo al candidato por un canal adecuado; no subir códigos al repositorio. En la web, configurar el backend en Preferencias, abrir Sesión controlada e introducir el código. El token se guarda en `sessionStorage`, no en una URL. La copia de emergencia de borradores tampoco permite modificar respuestas cerradas.
+
+Para producción usar `ENVIRONMENT=production`, TLS y `SECURE_BANK_PATH=/data/private-bank.json`. El banco usa el mismo esquema/códigos canónicos de tareas que `bank.json`, pero sus estímulos e ítems deben ser privados, diferentes y contar con autorización de uso. Mantenerlo fuera del directorio web y de GitHub. Antes de usarlo con estudiantes reales, validar el banco, la accesibilidad, los tiempos y la operativa del centro.
+
+### Revisión docente y conservación
+
+```powershell
+.venv\Scripts\python -m app.review_cli ID_DEL_INTENTO revision.json
+.venv\Scripts\python -m app.cleanup
+```
+
+`revision.json` contiene `reviewer`, `task_id`, `criterios` (bandas propias 0–4), `observaciones_es`, `observaciones_nl` y, para oral, `audio_escuchado: true`. Solo se ejecuta en el servidor por un operador autorizado; no es una ruta del candidato. La revisión no certifica SIELE. Las propuestas automáticas quedan auditadas como antecedentes. Las sesiones caducan a las 24 h; la limpieza horaria, mientras el servicio esté activo, elimina los registros expirados y sus grabaciones.
+
+### Verificación v3
+
+27 pruebas: 10 del motor/bilingüismo y 17 de backend, seguridad y propuestas de audio. TypeScript y compilación de producción pasan. Se verificó en navegador el selector NL, las instrucciones ES/NL y una sesión con código, recepción y recuperación del reloj/respuesta tras recargar. Los proveedores de IA y el decodificador de los tests se simulan; no se ha probado una clave real, un micrófono físico o un despliegue productivo del backend. La imagen Docker contiene FFmpeg, pero no se ha construido en este entorno.
+
+---
+
 # Fontys Español · Laboratorio de lenguas
 
 **Diseñado por Daniel Valle Robles.** Plataforma de práctica A1–C1 orientada a estudiantes de formación de profesores de español de Fontys Hogeschool. Material original, sin afiliación ni aval institucional. No certifica niveles, no emite certificados y no es una réplica oficial de SIELE.
@@ -129,7 +172,7 @@ SIELE es **multinivel**. No se ha encontrado documentación oficial que lo descr
 
 La formación contextual se orienta por la [información pública de Leraar Spaans deeltijd de Fontys](https://www.fontys.nl/Opleidingen/Leraar-Spaans-bachelor-deeltijd.htm): desarrollo lingüístico y cultural, diseño y mejora de clases, acompañamiento y contextos de enseñanza. El objetivo B2 del perfil es personalizable; no se afirma que esta plataforma cumpla un programa institucional aprobado.
 
-La rúbrica `formativa-mcer-1.0` es una síntesis propia de [descriptores generales MCER](https://www.coe.int/en/web/common-european-framework-reference-languages/cefr-descriptors). Los campos gramática, coherencia, vocabulario y cumplimiento (0–4) no son las escalas oficiales de SIELE. No se convierten sus sumas a MCER ni a puntos SIELE. El proveedor utiliza [Structured Outputs de OpenAI](https://developers.openai.com/api/docs/guides/structured-outputs): el esquema controla forma, no validez del juicio.
+La rúbrica `formativa-mcer-2.0` es una síntesis propia de [descriptores generales MCER](https://www.coe.int/en/web/common-european-framework-reference-languages/cefr-descriptors). Los campos gramática, coherencia, vocabulario y cumplimiento (0–4) no son las escalas oficiales de SIELE. No se convierten sus sumas a MCER ni a puntos SIELE. El proveedor utiliza [Structured Outputs de OpenAI](https://developers.openai.com/api/docs/guides/structured-outputs): el esquema controla forma, no validez del juicio.
 
 La evaluación puede abstenerse (`nivel_estimado=null`) y señalar revisión humana. Menos de 30 palabras fuerza abstención: umbral técnico propio, no corte oficial. Una cita literal verificable no prueba que la interpretación sea correcta. Una sola muestra ni un recorrido adaptativo de doce ítems permiten estimar competencia global. Para uso evaluativo real se necesitan pilotaje, corpus con doble corrección y adjudicación, estudios de acuerdo y estabilidad, análisis por grupo/variedad y validación de cortes. No se presuponen esos resultados.
 

@@ -10,5 +10,11 @@ class Settings(BaseSettings):
     openai_model: str = 'gpt-4.1-mini'
     frontend_origin: str = 'http://localhost:5173'
     max_audio_bytes: int = 10 * 1024 * 1024
+    environment: str = 'development'
+    transcription_model: str = 'gpt-transcribe'
+    ffmpeg_path: str = 'ffmpeg'
+    ffprobe_path: str = 'ffprobe'
+    ai_requests_per_minute: int = 4
+    secure_bank_path: str = ''
 
 settings = Settings()

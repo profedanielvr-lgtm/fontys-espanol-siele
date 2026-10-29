@@ -1,5 +1,16 @@
 PRAGMA foreign_keys=ON;
 
+CREATE TABLE exam_ticket (
+	code_hash VARCHAR(64) NOT NULL, 
+	modality VARCHAR(16) NOT NULL, 
+	expires_at FLOAT NOT NULL, 
+	used INTEGER NOT NULL, 
+	PRIMARY KEY (code_hash)
+)
+
+;
+
+
 CREATE TABLE intento_examen (
 	id INTEGER NOT NULL, 
 	usuario_id VARCHAR(64) NOT NULL, 
@@ -24,6 +35,19 @@ CREATE TABLE pregunta (
 	PRIMARY KEY (id), 
 	CHECK (destreza IN ('lectura','escucha','escritura','oral')), 
 	CHECK (nivel_mcer IN ('A1','A2','B1','B2','C1'))
+)
+
+;
+
+
+CREATE TABLE secure_attempt (
+	id VARCHAR(36) NOT NULL, 
+	token_hash VARCHAR(64) NOT NULL, 
+	expires_at FLOAT NOT NULL, 
+	revision INTEGER NOT NULL, 
+	data JSON NOT NULL, 
+	PRIMARY KEY (id), 
+	UNIQUE (token_hash)
 )
 
 ;

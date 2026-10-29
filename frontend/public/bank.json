@@ -1,5 +1,5 @@
 {
-  "version": "fontys-original-2.0",
+  "version": "fontys-original-3.0",
   "tasks": [
     {
       "id": "cl-1",
@@ -70,7 +70,8 @@
           "explanation": "«La luz se paga aparte» equivale a pagar la electricidad por separado.",
           "stimulus": "Se busca compañero de piso cerca del campus. La habitación cuesta cuatrocientos euros al mes, con agua e internet incluidos. La luz se paga aparte. El piso tiene cocina y dos dormitorios. No se admiten animales. Puedes visitar la habitación el viernes por la tarde, después de llamar a Rosa."
         }
-      ]
+      ],
+      "instruction_nl": "Lees elk bericht en kies één antwoord."
     },
     {
       "id": "cl-2",
@@ -136,7 +137,8 @@
           "answer": 2,
           "explanation": "El correo prohíbe publicar nombres y pide anonimizar ejemplos."
         }
-      ]
+      ],
+      "instruction_nl": "Lees de e-mail van Marta en beantwoord de vragen."
     },
     {
       "id": "cl-3",
@@ -235,7 +237,8 @@
           "answer": 1,
           "explanation": "El proyecto B lo indica explícitamente."
         }
-      ]
+      ],
+      "instruction_nl": "Koppel elke uitspraak aan project A, B of C. Je mag een letter meer dan één keer gebruiken."
     },
     {
       "id": "cl-4",
@@ -358,7 +361,8 @@
           "explanation": "El fragmento enlaza con el problema o la consecuencia desarrollados en el párrafo.",
           "group": "B"
         }
-      ]
+      ],
+      "instruction_nl": "Vul elke opening in met één van de vijf tekstfragmenten die bij de betreffende tekst horen. Per tekst blijft één fragment over."
     },
     {
       "id": "cl-5",
@@ -501,7 +505,8 @@
           "answer": 0,
           "explanation": "El marcador introduce una conclusión global."
         }
-      ]
+      ],
+      "instruction_nl": "Kies bij elke opening de optie die de tekst correct aanvult."
     },
     {
       "id": "ca-1",
@@ -628,7 +633,8 @@
           "explanation": "La conversación ofrece este dato de forma explícita."
         }
       ],
-      "audioSeconds": 300
+      "audioSeconds": 300,
+      "instruction_nl": "Luister naar het gesprek en vul de vijf gegevens aan met de opties uit de gezamenlijke keuzelijst."
     },
     {
       "id": "ca-2",
@@ -695,7 +701,8 @@
           "explanation": "Avisar permite ofrecer la plaza a otra persona."
         }
       ],
-      "audioSeconds": 420
+      "audioSeconds": 420,
+      "instruction_nl": "Luister naar de mededeling van de campus en beantwoord de vragen."
     },
     {
       "id": "ca-3",
@@ -859,7 +866,8 @@
           "explanation": "El relato describe esta decisión como aprendizaje principal."
         }
       ],
-      "audioSeconds": 660
+      "audioSeconds": 660,
+      "instruction_nl": "Koppel elke bijdrage aan één van de elf uitspraken. Drie opties blijven over."
     },
     {
       "id": "ca-4",
@@ -959,7 +967,8 @@
           "explanation": "Relaciona seguridad con reconocer dudas y buscar ayuda."
         }
       ],
-      "audioSeconds": 720
+      "audioSeconds": 720,
+      "instruction_nl": "Luister naar het interview en kies het antwoord dat de betekenis het beste weergeeft."
     },
     {
       "id": "ca-5",
@@ -1037,7 +1046,8 @@
           "explanation": "La conclusión evita entusiasmo y rechazo absolutos."
         }
       ],
-      "audioSeconds": 660
+      "audioSeconds": 660,
+      "instruction_nl": "Luister naar de zes fragmenten en bepaal de hoofdgedachte van elk fragment."
     },
     {
       "id": "ca-6",
@@ -1170,7 +1180,8 @@
         }
       ],
       "audioSeconds": 660,
-      "maxSelections": 6
+      "maxSelections": 6,
+      "instruction_nl": "Selecteer precies zes gedachten die in de lezing worden genoemd."
     },
     {
       "id": "eie-1",
@@ -1184,7 +1195,8 @@
       "words": [
         100,
         150
-      ]
+      ],
+      "instruction_nl": "Beantwoord het bericht: begroet de afzender, accepteer of weiger de uitnodiging met een reden, vertel over een stage-ervaring, stel een activiteit voor en neem afscheid. Schrijf je antwoord in het Spaans."
     },
     {
       "id": "eie-2",
@@ -1208,7 +1220,8 @@
           "title": "B · Carta a la redacción",
           "stimulus": "Un periódico local informa de que varios centros quieren sustituir una parte de las pruebas escritas por portafolios digitales. La propuesta ha suscitado preguntas sobre equidad, privacidad y carga de trabajo. Escribe una carta a la redacción en la que expreses tu posición, respondas a una objeción y propongas condiciones para una aplicación responsable."
         }
-      ]
+      ],
+      "instruction_nl": "Kies één optie en werk een standpunt uit met argumenten, voorbeelden, een tegenwerping en een conclusie. Houd rekening met het tekstgenre en de lezer. Schrijf in het Spaans."
     },
     {
       "id": "eio-1",
@@ -1226,7 +1239,8 @@
         "Cuéntame una actividad que hiciste la semana pasada."
       ],
       "preparation": 10,
-      "duration": 30
+      "duration": 30,
+      "instruction_nl": "Luister naar de vier vragen en beantwoord ze in het Spaans. Voor elk antwoord wordt een aparte opname opgeslagen."
     },
     {
       "id": "eio-2",
@@ -1253,7 +1267,8 @@
         "Describe la escena que has elegido."
       ],
       "preparation": 60,
-      "duration": 90
+      "duration": 90,
+      "instruction_nl": "Kies één van de twee afbeeldingen. Beschrijf de personen, hun handelingen en de plaats, en vertel wat er volgens jou hierna gebeurt. Dit zijn eigen oefenillustraties; het officiële examen gebruikt foto's. Spreek Spaans."
     },
     {
       "id": "eio-3",
@@ -1287,7 +1302,8 @@
         "Responde a la situación pública elegida."
       ],
       "preparation": 30,
-      "duration": 60
+      "duration": 60,
+      "instruction_nl": "Kies één persoonlijke en één openbare situatie. Leg het probleem uit, vraag of geef informatie en stel een oplossing voor. Spreek Spaans."
     },
     {
       "id": "eio-4",
@@ -1319,7 +1335,8 @@
         "¿Qué cambiarías en la evaluación para reconocer el aprendizaje propio?"
       ],
       "preparation": 30,
-      "duration": 60
+      "duration": 60,
+      "instruction_nl": "Kies een onderwerp, lees de tekst en beantwoord drie vragen in het Spaans. Het gekozen onderwerp blijft hetzelfde in de volgende taak."
     },
     {
       "id": "eio-5",
@@ -1352,7 +1369,8 @@
         "Desarrolla tu argumentación y termina con una conclusión."
       ],
       "preparation": 60,
-      "duration": 180
+      "duration": 180,
+      "instruction_nl": "Gebruik hetzelfde onderwerp als in taak 4 en kies één stelling. Onderbouw of betwist de gedachte in het Spaans met argumenten, nuances en voorbeelden."
     }
   ]
 }

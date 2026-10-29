@@ -1,3 +1,5 @@
+> **v3:** GitHub Pages publica la interfaz bilingüe. Para activar IA y sesiones con autoridad del servidor hay que alojar el backend aparte. En producción se exige banco privado y se bloquean las rutas heredadas abiertas. Consulta el README y `INVESTIGACION-Y-SEGURIDAD.md` antes del despliegue. El Dockerfile incluye FFmpeg y usa `ENVIRONMENT=production` de forma predeterminada.
+
 # Publicar la plataforma
 
 Autoría visible: **Diseñado por Daniel Valle Robles**.
